@@ -139,11 +139,7 @@ p,a{
     font-weight: 100;
     font-size: 17px;
 }
-#content-area{
-    width: 100vw;
-    height: 81vh;
-    /* background-color: black; */
-}
+
 #footer-line{
     height: 1px;
     width: 100vw;
@@ -178,7 +174,6 @@ p,a{
 .details-text{
     user-select: none;
 }
-
 /* ===================================================================== */
 @media screen and (max-width: 590px) {
     
