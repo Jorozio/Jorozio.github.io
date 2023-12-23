@@ -53,70 +53,29 @@ h1{
     font-size: 70px;
 }
 /* ===============================info page============================= */
-h2,#top-text,#bot-text{
-    font-family: crayonette-djr, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    font-size: 14vw;
-    margin: 0%;
-     position: absolute;
-     left: 540px;
-     top: -18%;
-     user-select: none;
 
-}
-#bot-text{
-    top: 26%;
-    left: 680px;
-    z-index: -1;
-}
-#top-content{
-    position: relative;
-    height: 370px;
-    width: 100vw;
-    overflow: visible;
-    z-index: -1;
-}
-#start-structure{
-    margin-top: 1%;
-    width: 450px;
-}
-#bot-content{
-    display: flex;
-}
-.para-structure{
-    width: 460px;
-    margin-top: 1.5%;
-}
-.padding{
-    padding-left: 4%;
-}
-#padding-inline{
-    padding-left: 2%;
-}
 
 @media screen and (max-width: 1600px) {
-    h2,#top-text,#bot-text{
+    h2,#top-textI,#bot-textI{
         color: white;
         font-size: 12vw;
          left: 645px;
          top: -18%;
     }
-    #bot-text{
+    #bot-textI{
         top: 20%;
         left: 750px;
     }
-    #top-content{
+    #top-contentI{
         height: 330px;
     }
-    .para-structure{
+    .para-structureI{
         width: 420px;
     }
 }
 @media screen and (max-height: 900px) {
-    #top-content{height: 320px;}
-    #bot-text{
+    #top-contentI{height: 320px;}
+    #bot-textI{
         top: 33%;
     }
 }
@@ -173,6 +132,29 @@ p,a{
 
 .details-text{
     user-select: none;
+}
+/* can use this to hide elements for javascript */
+.hidden {
+    display: none;
+   }
+/* ====================play======================== */
+@keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+   }
+#arrow{
+    width: 50px;
+    animation: moveUpDown 1s ease-in-out infinite;
+    display: none;
+}
+.video-p5js{
+    object-fit: cover;
+    width: 50%;
+    height: 50%;
 }
 /* ===================================================================== */
 @media screen and (max-width: 590px) {

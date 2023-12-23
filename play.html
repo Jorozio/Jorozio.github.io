@@ -9,13 +9,46 @@
     <link rel="stylesheet" href="https://use.typekit.net/itb5qzi.css">
     <script src="header.js" defer></script>
     <script src="script.js" defer></script>
+
     <style>
-        #content-area{
+        #video-space {
             width: 100vw;
-            height: 281.5vh;
+            height: 90.5vh;
             display: flex;
             justify-content: center;
-        }</style>
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        #arrow-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            height: 20.5vh;
+            bottom: 0;
+        }
+
+        #gallery {
+            height: 175.5vh;
+            display: flex;
+            /* use row for desktop and tablet layout */
+            flex-direction: row;
+            /* wrap is used to send something to the next row if it doesnt fit */
+            flex-wrap: wrap;
+            padding: 4%;
+            border-bottom: 1px solid white;
+        }
+        #p5jsexample{
+            height: 75.5vh;
+            background-color: blue;
+        }
+        #vid-seperator{
+            width: 100vh;
+            height: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -34,13 +67,29 @@
     </div>
     <div id="circle"></div>
     <!-- ================================================= -->
-      <!-- ================== content ================== -->
-      <div id="content-area">
-        <video id="index-video" width="1600" height="670" autoplay loop>
-             <source src="vid/play.mp4" type="video/mp4">
-     </div>
-     <div id="gallery"></div>
-        <!-- ================================================= -->
+    <!-- ================== content ================== -->
+    <div id="content-area">
+        <div id="video-space">
+            <video id="index-video" width="1600" height="670" autoplay loop>
+                <source src="vid/play.mp4" type="video/mp4" autoplay loop>
+            </video>
+            <div id="arrow-container">
+                <a href="#"><img id="arrow" src="img/arrow.svg"></a>
+            </div>
+        </div>
+        <div id="gallery">
+            <video class="video-p5js" src="vid/p5js3.mov" autoplay loop></video>
+            <video class="video-p5js" src="vid/p5js2.5.mov" autoplay loop></video>
+            <div id="vid-seperator"></div>
+            <video class="video-p5js" src="vid/p5js1.mov" autoplay loop></video>
+            <video class="video-p5js" src="vid/p5js4.5.mov" autoplay loop></video>
+        </div>
+        <div id="p5jsexample">
+            <script src="p5.js"></script>
+        </div>
+
+    </div>
+    <!-- ================================================= -->
     <!-- ================== footer ================== -->
     <div id="footer-line"></div>
     <div id="footer">

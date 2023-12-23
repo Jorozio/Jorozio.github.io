@@ -9,6 +9,164 @@
     <link rel="stylesheet" href="https://use.typekit.net/itb5qzi.css">
     <script src="header.js" defer></script>
     <script src="script.js" defer></script>
+    <style>
+        #PAGE-HEIGHT {
+            height: 180vh;
+        }
+
+        #sortby-container {
+            width: 100%;
+            height: 30vh;
+            display: flex;
+            align-items: end;
+            padding-left: 7%;
+        }
+
+        #sortby {
+            font-family: degular-display, sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            color: white;
+            font-size: 50px;
+            padding-bottom: 1%;
+            padding-left: -5%;
+        }
+
+        #child-container {
+            width: 90%;
+            height: 20vh;
+        }
+
+        #tag-container {
+            height: 70%;
+            width: 40%;
+        }
+
+        .tag,
+        .tag-special {
+            width: 130px;
+            height: 40px;
+            background-color: #111111;
+            color: rgb(255, 255, 255);
+            font-family: Helvetica, sans-serif;
+            font-weight: 100;
+            font-size: 17px;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 87px;
+            cursor: pointer;
+            margin: 1%;
+            margin-block: 1.2%;
+
+        }
+
+        .tag:hover,
+        .tag-special:hover {
+            color: #52a8ff !important;
+            border: 1px solid #52a8ff !important;
+        }
+
+        /* .tag-special:active{} */
+
+        #newest {
+            width: 95px;
+        }
+
+        #visual-identity {
+            width: 150px;
+        }
+
+        #creative-coding {
+            width: 165px;
+        }
+
+        #clear {
+            width: 40px
+        }
+
+        #project-container {
+            width: 100%;
+            height: 100vh;
+            padding: 6%;
+            padding-top: 3%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+
+        }
+
+        .container-style {
+            border: 1px solid white;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            margin: 0.7%;
+            cursor: pointer;
+            flex-wrap: nowrap;
+            width: 48%;
+            height: 50%;
+            overflow: hidden;
+        }
+
+        .container-style video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .container-style:hover video {
+            display: block;
+        }
+
+        #tag-text,
+        #title-text {
+            display: flex;
+            justify-content: center;
+            user-select: none;
+
+        }
+
+        .tag-text {
+            align-items: center;
+            position: relative;
+            padding-top: 2%;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+           
+            /* border: 1px solid white; */
+        }
+
+        #title-text {
+            /* border: 1px solid white; */
+            height: 100%;
+            width: 100%;
+            position: relative;
+            align-items: center;
+        }
+
+        .bot-text {
+            position: absolute;
+            top: 39%;
+
+        }
+
+        .top-text {
+            position: absolute;
+            top: 24%;
+        }
+
+        #mid-text {
+            position: absolute;
+            top: 29%;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -27,7 +185,90 @@
     </div>
     <div id="circle"></div>
     <!-- ================================================= -->
-    <div id="content-area"></div>
+    <div id="PAGE-HEIGHT">
+        <!-- ================== sorting container ==================  -->
+        <div id="sortby-container">
+            <div id="child-container">
+                <h2 id="sortby">Sort by</h2>
+                <div id="tag-container">
+                    <button class="tag-special" id="newest">Newest</button>
+                    <button class="tag" id="university">University</button>
+                    <button class="tag" id="client-work">Client work</button>
+                    <button class="tag" id="visual-identity">Visual identity</button>
+                    <button class="tag" id="campaign">Campaign</button>
+                    <button class="tag" id="creative-coding">Creative Coding</button>
+                    <button class="tag" id="clear">x</button>
+                </div>
+            </div>
+        </div>
+        <!-- ====================================================== -->
+        <div id="project-container">
+            <!-- =============project 1 ================== -->
+            <div data-tags="campaign,university" data-age="5" class="container-style" id="retrippin">
+                <div class="tag-text">
+                    <p>Campaign</p>
+                </div>
+                <div id="title-text">
+                    <h1 id="mid-text">RETRIPPIN</h1>
+                    <video class="hover-video" playsinline autoplay muted loop>
+                        <source src="vid/p5js1.mov" type="video/mp4">
+                      </video>
+                </div>
+            </div>
+            <!-- =============project 2 ================== -->
+            <div data-tags="visual-identity,university" data-age="6" class="container-style" id="museum">
+                <div class="tag-text">
+                    <p>Visual identity</p>
+                </div>
+                <div id="title-text">
+                    <h1 class="top-text">MUSEUM</h1>
+                    <h1 class="bot-text">OF PAPER</h1>
+                </div>
+            </div>
+            <!-- =============project 3 ================== -->
+            <div data-tags="visual-identity,campaign,university" data-age="4" class="container-style"
+                id="report&support">
+                <div class="tag-text">
+                    <p>Visual identity, Campaign</p>
+                </div>
+                <div id="title-text">
+                    <h1 class="top-text">REPORT&</h1>
+                    <h1 class="bot-text">SUPPORT</h1>
+                </div>
+            </div>
+            <!-- =============project 4 ================== -->
+            <div data-tags="visual-identity,client-work" data-age="1" class="container-style" id="DTC">
+                <div class="tag-text">
+                    <p>Visual identity</p>
+                </div>
+                <div id="title-text">
+                    <h1 class="top-text">DEDHAM</h1>
+                    <h1 class="bot-text">TENNIS CLUB</h1>
+                </div>
+            </div>
+            <!-- =============project 5 ================== -->
+            <div data-tags="creative-coding" data-age="3" class="container-style" id="gallery">
+                <div class="tag-text">
+                    <p>Web design</p>
+                </div>
+                <div id="title-text">
+                    <h1 class="top-text">RESPONSIVE</h1>
+                    <h1 class="bot-text">GALLERY</h1>
+                </div>
+            </div>
+            <!-- =============project 5 ================== -->
+            <div data-tags="creative-coding" data-age="2" class="container-style" id="narrative">
+                <div class="tag-text">
+                    <p>Storytelling, Interactive</p>
+                </div>
+                <div id="title-text">
+                    <h1 class="top-text">DIGITAL</h1>
+                    <h1 class="bot-text">NARRATIVE</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- ================== footer ================== -->
     <div id="footer-line"></div>
     <div id="footer">

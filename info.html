@@ -10,10 +10,52 @@
     <script src="header.js" defer></script>
     <script src="script.js" defer></script>
     <style>
-        #content-area{
+        #content-areaI{
     width: 100vw;
     height: 81.5vh;
     /* background-color: black; */
+}
+h2,#top-textI,#bot-textI{
+    font-family: crayonette-djr, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 14vw;
+    margin: 0%;
+     position: absolute;
+     left: 540px;
+     top: -18%;
+     user-select: none;
+
+}
+#bot-textI{
+    top: 26%;
+    left: 680px;
+    z-index: -1;
+}
+#top-contentI{
+    position: relative;
+    height: 370px;
+    width: 100vw;
+    overflow: visible;
+    z-index: -1;
+}
+#start-structureI{
+    margin-top: 1%;
+    width: 450px;
+}
+#bot-contentI{
+    display: flex;
+}
+.para-structureI{
+    width: 460px;
+    margin-top: 1.5%;
+}
+.paddingI{
+    padding-left: 4%;
+}
+#padding-inlineI{
+    padding-left: 2%;
 }
     </style>
 </head>
@@ -34,26 +76,26 @@
     </div>
     <div id="circle"></div>
     <!-- ================================================= -->
-    <div id="content-area">
-        <div id="top-content">
-            <div id="top-text">
-                <h2 id="top-text"></h2>
+    <div id="content-areaI">
+        <div id="top-contentI">
+            <div id="top-textI">
+                <h2 id="top-textI"></h2>
             </div>
             <div>
-                <h2 id="bot-text"></h2>
+                <h2 id="bot-textI"></h2>
             </div>
         </div>
 
-        <div id="mid-content">
-            <h1 class="padding">About me</h1>
-            <div id="start-structure" class="padding">
+        <div id="mid-contentI">
+            <h1 class="paddingI">About me</h1>
+            <div id="start-structureI" class="paddingI">
             <p>I’m currently studying at Norwich University of the Arts, partaking in a diploma of creative coding along
                 side my degree in graphic communication.</p>
             </div>
         </div>
 
-        <div id="bot-content">
-            <div class="para-structure padding">
+        <div id="bot-contentI">
+            <div class="para-structureI paddingI">
                 <p>I would consider myself a multidisciplinary designer with a passion for experimental design. My
                     expertise lay in digital software such as Illustrator, Photoshop, After-effects and indesign as well
                     as
@@ -61,7 +103,7 @@
                     such
                     as projecting mapping, AR and P5js. </p>
             </div>
-            <div class="para-structure" id="padding-inline">
+            <div class="para-structureI" id="padding-inlineI">
                 <p>My philosophy centers on the essence of experimentation and play. I find so much joy in the iterative
                     process of trial and error, embracing challenges as opportunities for growth. My creative pursuits
                     are driven by a desire to leverage creative technology for crafting innovative experiences as well
