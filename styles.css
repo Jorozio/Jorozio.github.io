@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: #111111;
+    background-color: #0f0f0f;
     width: 100vw;
     height: 98vh;
     transition: background-color 2s;
@@ -52,45 +52,17 @@ h1{
     color: white;
     font-size: 70px;
 }
+.para-structure {
+    width: 460px;
+    margin-top: 1.5%;
+
+}
 /* ===============================info page============================= */
 
+#external-link{
+    text-decoration: underline;
+}
 
-@media screen and (max-width: 1600px) {
-    h2,#top-textI,#bot-textI{
-        color: white;
-        font-size: 12vw;
-         left: 645px;
-         top: -18%;
-    }
-    #bot-textI{
-        top: 20%;
-        left: 750px;
-    }
-    #top-contentI{
-        height: 330px;
-    }
-    .para-structureI{
-        width: 420px;
-    }
-}
-@media screen and (max-height: 900px) {
-    #top-contentI{height: 320px;}
-    #bot-textI{
-        top: 33%;
-    }
-}
-@media screen and (max-width: 1450px) {
-    h2,#top-text,#bot-text{
-        color: white;
-        font-size: 10vw;
-         left: 720px;
-         top: -13%;
-    }
-    #bot-text{
-        top: 15%;
-        left: 800px;
-    }
-}
 /* ===================================================================== */
 p,a{
     color: white;
@@ -138,24 +110,22 @@ p,a{
     display: none;
    }
 /* ====================play======================== */
-@keyframes moveUpDown {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(10px);
-    }
-   }
-#arrow{
-    width: 50px;
-    animation: moveUpDown 1s ease-in-out infinite;
-    display: none;
-}
+
 .video-p5js{
     object-fit: cover;
     width: 50%;
     height: 50%;
 }
+
+h4{
+    font-family: degular-display, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: white;
+    font-size: 55px;
+    line-height: 90%;
+}
+
 /* ===================================================================== */
 @media screen and (max-width: 590px) {
     

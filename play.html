@@ -12,7 +12,7 @@
 
     <style>
         #video-space {
-            width: 100vw;
+            width: 100%;
             height: 90.5vh;
             display: flex;
             justify-content: center;
@@ -35,18 +35,75 @@
             display: flex;
             /* use row for desktop and tablet layout */
             flex-direction: row;
-            /* wrap is used to send something to the next row if it doesnt fit */
             flex-wrap: wrap;
             padding: 4%;
-            border-bottom: 1px solid white;
         }
-        #p5jsexample{
+
+        #p5jsexample {
             height: 75.5vh;
-            background-color: blue;
         }
-        #vid-seperator{
-            width: 100vh;
+
+        #vid-seperator {
+            width: 100%;
             height: 20px;
+        }
+
+        .video-p5js {
+            object-fit: contain;
+            width: 80%;
+            position: absolute;
+            z-index: -1;
+            display: none;
+        }
+
+        #index-video {
+            z-index: -2;
+        }
+
+        #position1 {
+            top: 20%;
+            left: 40%;
+        }
+
+        #position2 {
+            bottom: 10%;
+            right: 30%;
+        }
+
+        #position3 {
+            bottom: 50%;
+            right: 40%;
+        }
+
+        #position4 {
+            bottom: 50%;
+            right: 0%;
+        }
+
+        #position5 {
+            bottom: 15%;
+            right: 10%;
+        }
+
+
+        #content-area {
+            height: 240.5vh;
+        }
+
+        #play-container {
+            height: 70.5vh;
+            /* background-color: aquamarine; */
+            display: flex;
+            justify-content: left;
+            margin-top: 3%;
+
+        }
+
+        #text-container {
+            height: 70.5vh;
+            width: 43%;
+            /* background-color: rgb(0, 108, 72); */
+            padding-left: 4%;
         }
     </style>
 </head>
@@ -73,16 +130,20 @@
             <video id="index-video" width="1600" height="670" autoplay loop>
                 <source src="vid/play.mp4" type="video/mp4" autoplay loop>
             </video>
-            <div id="arrow-container">
-                <a href="#"><img id="arrow" src="img/arrow.svg"></a>
-            </div>
+            <video class="video-p5js" id="position2" src="vid/p5js1.mov" autoplay loop></video>
+            <video class="video-p5js" id="position3" src="vid/p5js4.5.mov" autoplay loop></video>
+            <video class="video-p5js" id="position4" src="vid/p5js2.mov" autoplay loop></video>
+            <video class="video-p5js" id="position5" src="vid/p5js2.5.mov" autoplay loop></video>
+            <video class="video-p5js" id="position1" src="vid/p5js3.mov" autoplay loop></video>
         </div>
-        <div id="gallery">
-            <video class="video-p5js" src="vid/p5js3.mov" autoplay loop></video>
-            <video class="video-p5js" src="vid/p5js2.5.mov" autoplay loop></video>
-            <div id="vid-seperator"></div>
-            <video class="video-p5js" src="vid/p5js1.mov" autoplay loop></video>
-            <video class="video-p5js" src="vid/p5js4.5.mov" autoplay loop></video>
+        <div id="play-container">
+            <div id="text-container">
+                <h4 >For me, learning to have fun through play provides so much inspiration for tackling real world issues
+                    and problems. The world is so serious and for good reason, but it’s nice to have a break from that
+                    to focus on growing skills and then coming back to see how these skills can apply and help solve
+                    these issues.</h4>
+            </div>
+ 
         </div>
         <div id="p5jsexample">
             <script src="p5.js"></script>
@@ -97,7 +158,7 @@
             <p>Website designed and coded from scratch</p>
         </div>
         <div class="details-text">
-            <a href="#">@jtdesignpage</a>
+            <a href="#">Instagram</a>
             <p id="seperator">|</p>
             <a href="mailto:joetaylorgd25@gmail.com">joetaylorgd25@gmail.com</a>
         </div>

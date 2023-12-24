@@ -10,53 +10,123 @@
     <script src="header.js" defer></script>
     <script src="script.js" defer></script>
     <style>
-        #content-areaI{
-    width: 100vw;
-    height: 81.5vh;
-    /* background-color: black; */
-}
-h2,#top-textI,#bot-textI{
-    font-family: crayonette-djr, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    font-size: 14vw;
-    margin: 0%;
-     position: absolute;
-     left: 540px;
-     top: -18%;
-     user-select: none;
+        #content-areaI {
+            width: 100vw;
+            height: 81.5vh;
 
-}
-#bot-textI{
-    top: 26%;
-    left: 680px;
-    z-index: -1;
-}
-#top-contentI{
-    position: relative;
-    height: 370px;
-    width: 100vw;
-    overflow: visible;
-    z-index: -1;
-}
-#start-structureI{
-    margin-top: 1%;
-    width: 450px;
-}
-#bot-contentI{
-    display: flex;
-}
-.para-structureI{
-    width: 460px;
-    margin-top: 1.5%;
-}
-.paddingI{
-    padding-left: 4%;
-}
-#padding-inlineI{
-    padding-left: 2%;
-}
+        }
+
+        h2,
+        #top-textI,
+        #bot-textI {
+            font-family: crayonette-djr, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: white;
+            font-size: 14vw;
+            margin: 0%;
+            position: absolute;
+            display: flex;
+            left: 540px;
+            top: -18%;
+            line-height: 1.7;
+            user-select: none;
+
+        }
+
+        #bot-textI {
+            top: 26%;
+            left: 680px;
+            z-index: -1;
+        }
+
+        #top-contentI {
+            position: relative;
+            height: 370px;
+            width: 100vw;
+            /* overflow: visible; */
+            z-index: -1;
+        }
+
+        #start-structureI {
+            margin-top: 1%;
+            width: 450px;
+
+        }
+
+        #bot-contentI {
+            display: flex;
+        }
+
+        
+
+        .paddingI {
+            padding-left: 4%;
+        }
+
+        #padding-inlineI {
+            padding-inline: 2%;
+        }
+
+
+        @media screen and (max-width: 1765px) {
+            .para-structure {
+                padding-bottom: 3%;
+            }
+        }
+
+        @media screen and (max-width: 1565px) {
+            #top-contentI {
+                height: 330px;
+            }
+
+            h2,
+            #top-textI,
+            #bot-textI {
+                font-size: 12vw;
+                left: 600px;
+            }
+
+            #bot-textI {
+                top: 23%;
+                left: 700px;
+            }
+        }
+
+        /* SMALLER DEVICES STRUCTURE CHANGE */
+        @media screen and (max-width: 1350px) {
+
+            h2,
+            #top-textI,
+            #bot-textI {
+                font-size: 100pt;
+                left: 70px;
+                margin-top: 5%;
+
+            }
+
+            #bot-textI {
+                top: 14%;
+                left: 147px;
+            }
+        }
+
+        @media screen and (max-width: 850px) {
+
+            #start-structureI {
+                margin-top: 1%;
+                width: 50vw;
+
+            }
+
+            h2,
+            #top-textI,
+            #bot-textI {
+                
+                margin-left: 8%;
+
+            }
+        }
     </style>
 </head>
 
@@ -76,43 +146,43 @@ h2,#top-textI,#bot-textI{
     </div>
     <div id="circle"></div>
     <!-- ================================================= -->
-    <div id="content-areaI">
-        <div id="top-contentI">
-            <div id="top-textI">
-                <h2 id="top-textI"></h2>
-            </div>
-            <div>
-                <h2 id="bot-textI"></h2>
-            </div>
-        </div>
 
-        <div id="mid-contentI">
-            <h1 class="paddingI">About me</h1>
-            <div id="start-structureI" class="paddingI">
+    <div id="top-contentI">
+        <div id="top-textI">
+            <h2 id="top-textI"></h2>
+        </div>
+        <div>
+            <h2 id="bot-textI"></h2>
+        </div>
+    </div>
+
+    <div id="mid-contentI">
+        <h1 class="paddingI">Hello!</h1>
+        <div id="start-structureI" class="paddingI">
             <p>I’m currently studying at Norwich University of the Arts, partaking in a diploma of creative coding along
                 side my degree in graphic communication.</p>
-            </div>
         </div>
+    </div>
 
-        <div id="bot-contentI">
-            <div class="para-structureI paddingI">
-                <p>I would consider myself a multidisciplinary designer with a passion for experimental design. My
-                    expertise lay in digital software such as Illustrator, Photoshop, After-effects and indesign as well
-                    as
-                    coding languages such as HTML, CSS and Javascript. I also have knowledge in other areas of design
-                    such
-                    as projecting mapping, AR and P5js. </p>
-            </div>
-            <div class="para-structureI" id="padding-inlineI">
-                <p>My philosophy centers on the essence of experimentation and play. I find so much joy in the iterative
-                    process of trial and error, embracing challenges as opportunities for growth. My creative pursuits
-                    are driven by a desire to leverage creative technology for crafting innovative experiences as well
-                    as immersive storytelling.</p>
-            </div>
-
+    <div id="bot-contentI">
+        <div class="para-structure paddingI">
+            <p>I am a multidisciplinary designer with a passion for experimental and interactive design. My
+                expertise lay in digital software such as Illustrator, Photoshop, After-effects and indesign as well
+                as
+                coding languages such as HTML, CSS and Javascript. I also have knowledge in other areas of design
+                such
+                as projecting mapping, AR and <a href="https://timrodenbroeker.de/" id="external-link">P5js.</a></p>
+        </div>
+        <div class="para-structure" id="padding-inlineI">
+            <p>My philosophy centers on the essence of experimentation and play. I find so much joy in the iterative
+                process of trial and error, embracing challenges as opportunities for growth. My creative pursuits
+                are driven by a desire to leverage creative technology for crafting innovative experiences as well
+                as immersive storytelling.</p>
         </div>
 
     </div>
+
+
     <!-- ================== footer ================== -->
     <div id="footer-line"></div>
     <div id="footer">
@@ -120,7 +190,7 @@ h2,#top-textI,#bot-textI{
             <p id="footer-text">Website designed and coded from scratch</p>
         </div>
         <div class="details-text">
-            <a href="#">@jtdesignpage</a>
+            <a href="#">Instagram</a>
             <p id="seperator">|</p>
             <a href="mailto:joetaylorgd25@gmail.com">joetaylorgd25@gmail.com</a>
         </div>

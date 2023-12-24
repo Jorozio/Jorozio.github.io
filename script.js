@@ -34,32 +34,33 @@ if (window.location.pathname === '/info.html') {
 // ================================================================
 
 // ============================== Play ============================
-let arrow = document.getElementById('arrow')
-
-
 if (window.location.pathname === '/play.html') {
-    setTimeout(function () {
-        arrow.style.display = 'block'
-    }, 1900);
+    
+let videosP5js = Array.from(document.getElementsByClassName("video-p5js"));
+let play = document.getElementById("index-video")
+setTimeout(function () {
 
-    window.addEventListener('scroll', function () {
-        if (window.scrollY >= 0 && window.scrollY <= 50) {
-            arrow.style.display = 'block';
-        } else {
-            arrow.style.display = 'none';
-        }
-    });
-    arrow.addEventListener('click', function () {
-        document.getElementById('gallery').scrollIntoView({
-            behavior: 'smooth'
 
-        });
-    });
+setInterval(() => {
+    let randomIndex = Math.floor(Math.random() * videosP5js.length);
+    toggleVisibility(videosP5js[randomIndex]);
+ }, 500);
+
+ function toggleVisibility(videoElement) {
+    if (videoElement.style.display === "block") {
+     
+       
+    } else {
+        videoElement.style.display = "block";
+    }
+ }
+}, 2000);
+
+
+setTimeout(function () {
+    play.style.display = "none"
+}, 6500);
 }
-
-
-
-
 
 // ================================================================
 
@@ -75,19 +76,33 @@ if (window.location.pathname === '/projects.html') {
     let campaign = document.getElementById("campaign")
     let containers = document.querySelectorAll('.container-style');
 
-    // video containers
-   
+    window.onload = () => {
+        let videos = document.getElementsByTagName('video');
+        setT
+        for (let i = 0; i < videos.length; i++) {
+            // Add event listener for mouseover
+            videos[i].addEventListener('mouseover', function() {
+                this.play();
+            });
+         
+            // Add event listener for mouseout
+            videos[i].addEventListener('mouseout', function() {
+                this.pause();
+            });
+         }
+    }
+
 
     containers.forEach(container => {
-     container.addEventListener('mouseover', () => {
-      let tagText = container.querySelector(".tag-text")
-      tagText.style.display = "none"
-     })
-    
-     container.addEventListener('mouseout', () => {
-      let tagText = container.querySelector(".tag-text")
-      tagText.style.display = ""
-     })
+        container.addEventListener('mouseover', () => {
+            let tagText = container.querySelector(".tag-text")
+            tagText.style.display = "none"
+        })
+
+        container.addEventListener('mouseout', () => {
+            let tagText = container.querySelector(".tag-text")
+            tagText.style.display = ""
+        })
     })
     let originalOrder = Array.from(containers);
 
@@ -100,14 +115,16 @@ if (window.location.pathname === '/projects.html') {
         });
     }
 
- 
+
 
     hideButtons = (clickedButton) => {
         const buttons = Array.from(document.querySelectorAll('.tag'));
         buttons.forEach(button => {
- 
+            clickedButton.style.color = "#000";
+            clickedButton.style.backgroundColor = "#FFF";
             if (button.id !== 'clear' && button !== clickedButton) {
                 button.classList.add('hidden');
+                
             }
         });
     };
@@ -117,25 +134,27 @@ if (window.location.pathname === '/projects.html') {
         const buttons = Array.from(document.querySelectorAll('.tag'));
         buttons.forEach(button => {
             button.classList.remove('hidden');
-            newest.style.color = "#fff";
-            newest.style.border = "1px solid #fff";
-            containersArray.forEach(container => {
-                container.style.display = 'flex';
-            });
+            button.style.backgroundColor = "#101010";
+            button.style.color = "#FFF";
         });
-
+        newest.style.backgroundColor = "#101010";
+  newest.style.color = "#FFF";
+        containersArray.forEach(container => {
+            container.style.display = 'flex';
+        });
+     
         // Restore the original order of the divs
         const parentContainer = containers[0].parentNode;
         originalOrder.forEach(container => {
             parentContainer.appendChild(container);
         });
-    })
+     })
 
     newest.addEventListener('click', () => {
         // Get all containers
         const containersArray = Array.from(containers);
-        newest.style.color = "#52a8ff";
-        newest.style.border = "1px solid #52a8ff";
+        newest.style.color = "#000";
+        newest.style.backgroundColor = "#FFF";
 
         // Sort the containers array based on the data-age attribute
         containersArray.sort((a, b) => {

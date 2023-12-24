@@ -10,12 +10,26 @@
     <script src="header.js" defer></script>
     <script src="script.js" defer></script>
     <style>
+        #background-video {
+ width: 100vw;
+ height: 100vh;
+ object-fit: cover;
+ position: fixed;
+ left: 0;
+ right: 0;
+ top: 0;
+ bottom: 0;
+ z-index: -1;
+}
+
     #content-area{
         width: 100vw;
         height: 81.5vh;
         display: flex;
         justify-content: center;
-    }</style>
+    }
+
+    </style>
 </head>
 
 <body>
@@ -36,8 +50,9 @@
     <!-- ================================================= -->
         <!-- ================== content ================== -->
     <div id="content-area">
-       <a href="projects.html"><video id="index-video" width="1550" height="670" autoplay loop>
-            <source src="vid/portfolio_vid.mp4" type="video/mp4"> </a> 
+        <video id="background-video" autoplay loop muted poster="https://example.com/poster.jpg">
+            <source src="vid/#" type="video/mp4">
+           </video>
     </div>
        <!-- ================================================= -->
     <!-- ================== footer ================== -->
@@ -47,7 +62,7 @@
             <p>Website designed and coded from scratch</p>
         </div>
         <div class="details-text">
-            <a href="#">@jtdesignpage</a>
+            <a href="#">Instagram</a>
             <p id="seperator">|</p>
             <a class="details-text" href="mailto:joetaylorgd25@gmail.com">joetaylorgd25@gmail.com</a>
         </div>

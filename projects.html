@@ -7,8 +7,9 @@
     <title>JTdesignpage</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/itb5qzi.css">
-    <script src="header.js" defer></script>
+   
     <script src="script.js" defer></script>
+    <script src="header.js" defer></script>
     <style>
         #PAGE-HEIGHT {
             height: 180vh;
@@ -20,6 +21,8 @@
             display: flex;
             align-items: end;
             padding-left: 7%;
+          
+
         }
 
         #sortby {
@@ -30,6 +33,7 @@
             font-size: 50px;
             padding-bottom: 1%;
             padding-left: -5%;
+            
         }
 
         #child-container {
@@ -38,9 +42,14 @@
         }
 
         #tag-container {
+            display: flex;
+            flex-wrap: wrap;
             height: 70%;
             width: 40%;
+            /* background-color: #52a8ff; */
         }
+
+     
 
         .tag,
         .tag-special {
@@ -61,8 +70,8 @@
 
         .tag:hover,
         .tag-special:hover {
-            color: #52a8ff !important;
-            border: 1px solid #52a8ff !important;
+            background-color: #ffffff !important;
+            color: #111111 !important;
         }
 
         /* .tag-special:active{} */
@@ -91,6 +100,7 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
+            
 
         }
 
@@ -166,6 +176,31 @@
             top: 29%;
         }
 
+        @media screen and (max-width: 1600px) {
+            #tag-container {
+                width: 100%;
+            }
+            #project-container {
+                padding-top: 0%;
+            }
+        }
+        @media screen and (max-width: 1165px) {
+            #tag-container {
+                width: 100%;
+            }
+            #project-container {
+                padding-top: 3%;
+            }
+
+            .container-style{
+                width: 100%;
+            }
+
+            #PAGE-HEIGHT {
+            height: 320vh;
+        }
+    
+        }
     </style>
 </head>
 
@@ -211,7 +246,7 @@
                 <div id="title-text">
                     <h1 id="mid-text">RETRIPPIN</h1>
                     <video class="hover-video" playsinline autoplay muted loop>
-                        <source src="vid/p5js1.mov" type="video/mp4">
+                        <source src="vid/retrippin.mp4" type="video/mp4">
                       </video>
                 </div>
             </div>
@@ -223,6 +258,9 @@
                 <div id="title-text">
                     <h1 class="top-text">MUSEUM</h1>
                     <h1 class="bot-text">OF PAPER</h1>
+                    <video class="hover-video" playsinline autoplay muted loop>
+                        <source src="vid/museum.mp4" type="video/mp4">
+                      </video>
                 </div>
             </div>
             <!-- =============project 3 ================== -->
@@ -234,6 +272,9 @@
                 <div id="title-text">
                     <h1 class="top-text">REPORT&</h1>
                     <h1 class="bot-text">SUPPORT</h1>
+                    <video class="hover-video" playsinline autoplay muted loop >
+                        <source src="vid/report.mp4" type="video/mp4">
+                      </video>
                 </div>
             </div>
             <!-- =============project 4 ================== -->
@@ -254,6 +295,9 @@
                 <div id="title-text">
                     <h1 class="top-text">RESPONSIVE</h1>
                     <h1 class="bot-text">GALLERY</h1>
+                    <video class="hover-video" playsinline autoplay muted loop>
+                        <source src="vid/Gallery.mp4" type="video/mp4">
+                      </video>
                 </div>
             </div>
             <!-- =============project 5 ================== -->
@@ -264,6 +308,9 @@
                 <div id="title-text">
                     <h1 class="top-text">DIGITAL</h1>
                     <h1 class="bot-text">NARRATIVE</h1>
+                    <video class="hover-video" playsinline autoplay muted loop>
+                        <source src="vid/DN.mp4" type="video/mp4">
+                      </video>
                 </div>
             </div>
         </div>
@@ -276,7 +323,7 @@
             <p>Website designed and coded from scratch</p>
         </div>
         <div class="details-text">
-            <a href="#">@jtdesignpage</a>
+            <a href="#">Instagram</a>
             <p id="seperator">|</p>
             <a href="mailto:joetaylorgd25@gmail.com">joetaylorgd25@gmail.com</a>
         </div>
