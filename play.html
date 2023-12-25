@@ -39,10 +39,6 @@
             padding: 4%;
         }
 
-        #p5jsexample {
-            height: 75.5vh;
-        }
-
         #vid-seperator {
             width: 100%;
             height: 20px;
@@ -61,22 +57,22 @@
         }
 
         #position1 {
-            top: 20%;
+            top: 25%;
             left: 40%;
         }
 
         #position2 {
-            bottom: 10%;
+            bottom: 5%;
             right: 30%;
         }
 
         #position3 {
-            bottom: 50%;
+            bottom: 40%;
             right: 40%;
         }
 
         #position4 {
-            bottom: 50%;
+            bottom: 35%;
             right: 0%;
         }
 
@@ -91,20 +87,60 @@
         }
 
         #play-container {
-            height: 70.5vh;
-            /* background-color: aquamarine; */
-            display: flex;
-            justify-content: left;
-            margin-top: 3%;
+   height: 70.5vh;
+   display: flex;
+   flex-direction: row;
+   justify-content: right;
+   margin-top: 7%;
+}
 
-        }
+#p5jsexample {
+   width: 47%;
+   margin-left: 7%;
+}
 
-        #text-container {
-            height: 70.5vh;
-            width: 43%;
-            /* background-color: rgb(0, 108, 72); */
-            padding-left: 4%;
-        }
+#text-container {
+   height: 70.5vh;
+   width: 38%;
+   margin-top: 2%;
+   margin-right: 4%;
+   margin-left: 2%;
+}
+
+@media screen and (max-width: 1408px) {
+   #play-container {
+       flex-direction: column;
+   }
+
+   #p5jsexample {
+       width: 100%;
+       margin-inline: 20%;
+   }
+
+   #text-container {
+       width: 60%;
+       margin-inline: 20%;
+       margin-top: 2%;
+   }
+   h4{
+    font-size: 40px;
+   }
+}
+@media screen and (max-width: 1000px) {
+
+   #content-area {
+       display: none;
+   }
+  #error-message{
+    display: flex;
+  }
+  #error{
+    width: 60%;
+    text-align: center;
+    padding-top: 2%;
+  }
+
+}
     </style>
 </head>
 
@@ -125,6 +161,10 @@
     <div id="circle"></div>
     <!-- ================================================= -->
     <!-- ================== content ================== -->
+    <div id="error-message">
+        <h4>Whoops!</h4>
+        <p id="error">This page isn't yet optimised for this display size yet!</p>
+    </div>
     <div id="content-area">
         <div id="video-space">
             <video id="index-video" width="1600" height="670" autoplay loop>
@@ -137,17 +177,20 @@
             <video class="video-p5js" id="position1" src="vid/p5js3.mov" autoplay loop></video>
         </div>
         <div id="play-container">
+            <div id="p5jsexample">
+                <iframe width="770" height="635" src="https://www.youtube.com/embed/HRDohsnuSek?si=mnPYjjuNAWF7G09C"
+                    title="YouTube video player" frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>   
+            </div>
             <div id="text-container">
-                <h4 >For me, learning to have fun through play provides so much inspiration for tackling real world issues
+                <h4>For me, learning to have fun through play provides so much inspiration for tackling real world
+                    issues
                     and problems. The world is so serious and for good reason, but it’s nice to have a break from that
                     to focus on growing skills and then coming back to see how these skills can apply and help solve
                     these issues.</h4>
             </div>
- 
         </div>
-        <div id="p5jsexample">
-            <script src="p5.js"></script>
-        </div>
+      
 
     </div>
     <!-- ================================================= -->
@@ -155,7 +198,7 @@
     <div id="footer-line"></div>
     <div id="footer">
         <div class="details-text">
-            <p>Website designed and coded from scratch</p>
+            <p id="remove-at-vp">Website designed and coded from scratch</p>
         </div>
         <div class="details-text">
             <a href="#">Instagram</a>

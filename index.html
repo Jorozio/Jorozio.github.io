@@ -11,24 +11,142 @@
     <script src="script.js" defer></script>
     <style>
         #background-video {
- width: 100vw;
- height: 100vh;
- object-fit: cover;
- position: fixed;
- left: 0;
- right: 0;
- top: 0;
- bottom: 0;
- z-index: -1;
-}
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            display: none;
 
-    #content-area{
-        width: 100vw;
-        height: 81.5vh;
-        display: flex;
-        justify-content: center;
-    }
+        }
 
+        #content-area {
+            width: 100vw;
+            height: 81.5vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        h2 {
+            font-family: degular-display, sans-serif;
+            font-weight: 100;
+            font-size: 150px;
+            font-style: italic;
+            color: white;
+            user-select: none;
+        }
+
+        #title-welcome {
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .welcome-text {
+            /* background-color: blueviolet; */
+            height: 110px;
+        }
+        #description-container{
+            width: 543px;
+            text-align: right;
+            margin-right: 4%;
+            margin-bottom: 30%;
+            display: none;
+            user-select: none;
+        }
+        #welcome-container {
+            width: 70%;
+            margin: 3%;
+            position: absolute;
+            bottom: 5%;
+            left: 0;
+
+        }
+
+
+        #overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.395);
+            z-index: -1;
+        }
+
+        #question-container {
+            height: 30vh;
+            width: 750px;
+            text-align: center;
+        }
+
+        .question-text,
+        #small-text {
+            user-select: none;
+            text-align: center;
+        }
+
+        p {
+            font-size: 14pt;
+        }
+
+        .question-link {
+            font-family: degular-display, sans-serif;
+            font-weight: 600;
+            font-style: italic;
+            color: white;
+            background: transparent;
+            cursor: pointer;
+            border: none;
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+            text-underline-offset: 5px;
+        }
+
+        #question-text,
+        .question-link {
+            font-size: 65px;
+            line-height: 100%;
+            user-select: none;
+        }
+        @media screen and (max-width: 1465px) {
+            h4{
+                font-size: 30px;
+                line-height: 90%;
+            }
+            h2{
+                font-size: 75px;
+                line-height: 90%;
+            }
+
+            .question-link,#question-text{
+                font-size: 35px;
+            }
+            #question-container {
+            width: 450px;
+        }
+        #description-container{
+            margin-bottom: 540px;
+            width: 343px;
+        }
+        .welcome-text {
+            height: 60px;
+        }
+        }
+        @media screen and (max-width: 620px) {
+            h2{
+                font-size: 40px;
+                line-height: 1%;
+            }
+            .welcome-text {
+            height: 30px;
+        }
+        }
     </style>
 </head>
 
@@ -48,18 +166,56 @@
     </div>
     <div id="circle"></div>
     <!-- ================================================= -->
-        <!-- ================== content ================== -->
+    <!-- ================== content ================== -->
     <div id="content-area">
-        <video id="background-video" autoplay loop muted poster="https://example.com/poster.jpg">
-            <source src="vid/#" type="video/mp4">
-           </video>
+        <!-- ======================= Question container =======================-->
+        <div id="question-container">
+            <div id="small-text">
+                <p>Are you here for the</p>
+            </div>
+            <div id="question-box">
+                <h1 id="question-text"><a href="projects.html" class="question-link">Scenic route </a> or did you want to take the
+                    <button id="start-button" class="question-link">shortcut?</button></h1>
+
+            </div>
+        </div>
+         <!-- ====================================================================-->
+         <div id="description-container">
+            <h4>I am a multidisciplinary
+                visual communication designer
+                 with a passion
+                for interactive and
+                responsive design </h4>
+         </div>
+        <div id="welcome-container">
+            <div class="welcome-text hidden" id="welcome1">
+                <h2 id="title-welcome">Welcome</h2>
+            </div>
+            <div class="welcome-text hidden" id="welcome2">
+                <h2>&lt;!-- Welcome --&gt;</h2>
+            </div>
+            <div class="welcome-text hidden" id="welcome3">
+                <h2>/*Welcome*/</h2>
+            </div>
+            <div class="welcome-text hidden" id="welcome4">
+                <h2>// Welcome</h2>
+            </div>
+        </div>
+
+
+
+        <video id="background-video" loop muted autoplay>
+            <source src="vid/start_videoV1.mp4" type="video/mp4">
+        </video>
+   
     </div>
-       <!-- ================================================= -->
+    <div id="overlay"></div>
+    <!-- ================================================= -->
     <!-- ================== footer ================== -->
     <div id="footer-line"></div>
     <div id="footer">
         <div class="details-text">
-            <p>Website designed and coded from scratch</p>
+            <p id="remove-at-vp">Website designed and coded from scratch</p>
         </div>
         <div class="details-text">
             <a href="#">Instagram</a>

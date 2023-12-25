@@ -1,14 +1,44 @@
+// ============================= index =============================
+if (window.location.pathname === '/index.html') {
+let shortcut = document.getElementById("start-button")
+let questionDiv = document.getElementById("question-container")
+let welcome = Array.from(document.getElementsByClassName("welcome-text"))
+let backgroundVideo = document.getElementById("background-video")
+let description = document.getElementById("description-container")
+let contentArea = document.getElementById("content-area")
+shortcut.addEventListener('click', () => {
+   questionDiv.classList.add('hidden')
+   welcome.forEach((item, index) => {
+       setTimeout(() => {
+           item.classList.remove('hidden');
+       }, index * 300); 
+              setTimeout(() => {
+                backgroundVideo.style.display = "block"
+       }, 1300);       setTimeout(() => {
+        contentArea.style.justifyContent = "right"
+        description.style.display = "block"
+       }, 3000);
+       
+   })
+   
+});
+
+}
+
+
+// ================================================================
 
 // ============================= info =============================
 
-let topText = document.getElementById('top-textI')
-let botText = document.getElementById('bot-textI')
-let i = 0;
 
 if (window.location.pathname === '/info.html') {
-    setTimeout(function () {
+    let topText = document.getElementById('top-textI')
+    let botText = document.getElementById('bot-textI')
+    let i = 0;
+
+    setTimeout(() => {
         document.body.classList.add("transition");
-        setTimeout(function () {
+        setTimeout(() => {
             let typingEffect = setInterval(() => {
                 let textT = "It's very nice";
                 let textB = "to meet you";
@@ -25,7 +55,7 @@ if (window.location.pathname === '/info.html') {
 
 
 } else {
-    setTimeout(function () {
+    setTimeout(() => {
         document.body.classList.remove("transition");
     }, 200);
 }
@@ -35,31 +65,31 @@ if (window.location.pathname === '/info.html') {
 
 // ============================== Play ============================
 if (window.location.pathname === '/play.html') {
-    
-let videosP5js = Array.from(document.getElementsByClassName("video-p5js"));
-let play = document.getElementById("index-video")
-setTimeout(function () {
+
+    let videosP5js = Array.from(document.getElementsByClassName("video-p5js"));
+    let play = document.getElementById("index-video")
+    setTimeout(() => {
 
 
-setInterval(() => {
-    let randomIndex = Math.floor(Math.random() * videosP5js.length);
-    toggleVisibility(videosP5js[randomIndex]);
- }, 500);
+        setInterval(() => {
+            let randomIndex = Math.floor(Math.random() * videosP5js.length);
+            toggleVisibility(videosP5js[randomIndex]);
+        }, 500);
 
- function toggleVisibility(videoElement) {
-    if (videoElement.style.display === "block") {
-     
-       
-    } else {
-        videoElement.style.display = "block";
-    }
- }
-}, 2000);
+        toggleVisibility = (videoElement) => {
+            if (videoElement.style.display === "block") {
 
 
-setTimeout(function () {
-    play.style.display = "none"
-}, 6500);
+            } else {
+                videoElement.style.display = "block";
+            }
+        }
+    }, 2000);
+
+
+    setTimeout(() => {
+        play.style.display = "none"
+    }, 6500);
 }
 
 // ================================================================
@@ -81,15 +111,15 @@ if (window.location.pathname === '/projects.html') {
         setT
         for (let i = 0; i < videos.length; i++) {
             // Add event listener for mouseover
-            videos[i].addEventListener('mouseover', function() {
+            videos[i].addEventListener('mouseover', () => {
                 this.play();
             });
-         
+
             // Add event listener for mouseout
-            videos[i].addEventListener('mouseout', function() {
+            videos[i].addEventListener('mouseout', () => {
                 this.pause();
             });
-         }
+        }
     }
 
 
@@ -124,7 +154,7 @@ if (window.location.pathname === '/projects.html') {
             clickedButton.style.backgroundColor = "#FFF";
             if (button.id !== 'clear' && button !== clickedButton) {
                 button.classList.add('hidden');
-                
+
             }
         });
     };
@@ -138,17 +168,17 @@ if (window.location.pathname === '/projects.html') {
             button.style.color = "#FFF";
         });
         newest.style.backgroundColor = "#101010";
-  newest.style.color = "#FFF";
+        newest.style.color = "#FFF";
         containersArray.forEach(container => {
             container.style.display = 'flex';
         });
-     
+
         // Restore the original order of the divs
         const parentContainer = containers[0].parentNode;
         originalOrder.forEach(container => {
             parentContainer.appendChild(container);
         });
-     })
+    })
 
     newest.addEventListener('click', () => {
         // Get all containers

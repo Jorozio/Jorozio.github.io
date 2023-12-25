@@ -56,9 +56,11 @@
 
         #bot-contentI {
             display: flex;
+            flex-direction: row;
         }
 
-        
+
+
 
         .paddingI {
             padding-left: 4%;
@@ -122,11 +124,27 @@
             h2,
             #top-textI,
             #bot-textI {
-                
+
                 margin-left: 8%;
 
             }
         }
+
+        @media screen and (max-width: 720px) {
+
+#content-area {
+    display: none;
+}
+#error-message{
+ display: flex;
+}
+#error{
+ width: 60%;
+ text-align: center;
+ padding-top: 2%;
+}
+
+}
     </style>
 </head>
 
@@ -146,7 +164,11 @@
     </div>
     <div id="circle"></div>
     <!-- ================================================= -->
-
+    <div id="error-message">
+        <h4>Whoops!</h4>
+        <p id="error">This page isn't yet optimised for this display size yet!</p>
+    </div>
+<div id="content-area">
     <div id="top-contentI">
         <div id="top-textI">
             <h2 id="top-textI"></h2>
@@ -181,13 +203,13 @@
         </div>
 
     </div>
-
+</div>
 
     <!-- ================== footer ================== -->
     <div id="footer-line"></div>
     <div id="footer">
         <div class="details-text">
-            <p id="footer-text">Website designed and coded from scratch</p>
+            <p id="remove-at-vp">Website designed and coded from scratch</p>
         </div>
         <div class="details-text">
             <a href="#">Instagram</a>
