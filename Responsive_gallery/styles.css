@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    /* uses viewport units, 1vh is equivalent to 1% of the viewport height */
+    background-color: rgb(37, 37, 37);
+    /* custom cursor that is used for all of the document */
+    cursor: url('cursor.png'), auto;
+}
+
+p {
+    font-family: Helvetica, sans-serif;
+    font-size: 1rem;
+    color: white;
+    padding: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+h3 {
+    font-family: Helvetica, sans-serif;
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+    padding-right: 4%;
+
+}
+/* this creates a hover effect in theme with ethereal */
+img:hover {
+    filter:brightness(10);
+    transition: 1s;
+   
+}
+
+#header {
+    background-color: rgb(37, 37, 37);
+    padding: 5px;
+    text-align: left;
+    margin-top: 2.5%;
+    display: flex;
+    /* space between seperates the 2 div's within the header so that they can allign to the right and the left */
+    justify-content: space-between;
+    /* allign items to baselines pushes them to the bottom of the header */
+    align-items: baseline;
+}
+
+#header-text {
+    font-family: Helvetica, sans-serif;
+    font-size: 4rem;
+    color: white;
+    text-transform: uppercase;
+    padding-left: 4%;
+
+}
+
+/* LINE STYLING */
+.line-header {
+    height: 1px;
+    width: 95%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 4.2%;
+
+}
+
+/* LINE STYLING */
+.line-ender {
+    height: 1px;
+    width: 95%;
+    background-color: rgb(255, 255, 255);
+}
+
+/* LINE STYLING */
+.section-extra {
+    height: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: rgb(35, 35, 35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hyper-container {
+    display: flex;
+    /* column is used for making sure all content falls beneath eachothers, making sure the footer doesnt align to the right */
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    /* use flexbox to layout a row or column */
+    display: flex;
+    /* use row for desktop and tablet layout */
+    flex-direction: row;
+    /* wrap is used to send something to the next row if it doesnt fit */
+    flex-wrap: wrap;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+img {
+    width: 100%;
+    /* stops distortion */
+    object-fit: cover;
+    border: 1px;
+    border-color: rgb(255, 255, 255);
+    /* i decided after trying a radius, I preffered the style without it*/
+    /* border-radius: 3%; */
+    border-style: inset;
+}
+
+.column {
+    flex: 1;
+    /* flex value of 1 signifies that the width of all other elements will be the same as their content */
+    padding: 0.2%;
+}
+
+#text-container {
+    height: 60px;
+    width: 100vw;
+}
+
+/* for ipad or tablets */
+@media screen and (max-width: 900px) {
+    .column {
+        min-width: 50%;
+    }
+
+    button {
+        min-width: 50%;
+        height: 5vh;
+    }
+
+    /* changes title for better viewing */
+    #header-text {
+        font-size: 3rem;
+    }
+  
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    /* below makes sure theres enough room for the text at the bottom as different devides needed different amounts*/
+    p {
+        font-size: 1.3rem;
+        padding: 2%;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    #text-container {
+        height: 70px;
+    }
+    .container{
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    }
+}
+
+/* for phone screens */
+@media screen and (max-width: 590px) {
+    .column {
+        min-width: 100%;
+    }
+
+    button {
+        min-width: 100%;
+        height: 5vh;
+    }
+
+    #player-frame {
+        height: 20vh;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    /* changes title for better viewing */
+    #header-text {
+        font-size: 2.7rem;
+        
+    }
+
+    h3 {
+        font-size: 0.9rem;
+        padding: 0%;
+        width: 120px;
+    }
+
+    #header {
+        align-items: center;
+    }
+
+    /* below makes sure theres enough room for the text at the bottom as different devides needed different amounts*/
+    p {
+        font-size: 1.2rem;
+        padding: 5%;
+    }
+
+    #text-container {
+        height: 90px;
+    }
+    
+}
+
+/* this would be for controlling the layout for bigger screens */
+@media screen and (min-width: 2000px) {}
+
+/* this is for the long images and controls their aspect ration */
+#gallery-style1 {
+    aspect-ratio: 9/16 auto;
+}
+
+/* this is for the short images and controls their aspect ration */
+#gallery-style2 {
+    aspect-ratio: 3/4 auto;
+}
+/* the button for the video player */
+button {
+
+    padding: 1%;
+    background-color: rgb(35, 35, 35);
+    /* this resets the design on the buttons so custom css can be apllied */
+    text-decoration: none;
+    border-style: inset;
+    border-color: white;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    flex: 1;
+}
+/* the hover state  */
+button:hover {
+    /* this adds feedback to let the user know if its working   */
+    border-color: rgb(109, 162, 240);
+    color: rgb(109, 162, 240);
+    cursor: pointer;
+}
+/* the frame that holds the buttons */
+#player-frame {
+    padding-inline: 2.2%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}

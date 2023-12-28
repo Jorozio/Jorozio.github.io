@@ -83,6 +83,7 @@
             height: 30vh;
             width: 750px;
             text-align: center;
+            position: relative;
         }
 
         .question-text,
@@ -114,6 +115,34 @@
             line-height: 100%;
             user-select: none;
         }
+        .arrow-sizing{
+            width: 3vw;
+            position: absolute;
+            animation: bounce 2s infinite;
+            display: block;
+        }
+        #arrow-positioning1{
+            top: -15px;
+            left: -25px;
+            rotate: -49deg;
+        }
+        #arrow-positioning2{
+            top: 130px;
+            right: 30px;
+            rotate: 115deg;
+        }
+
+        @keyframes bounce {
+ 0%, 25%, 50%, 75%, 100% {
+   transform: translateY(0);
+ }
+ 25% {
+   transform: translateY(-15px);
+ }
+ 75% {
+   transform: translateY(-15px);
+ }
+}
         @media screen and (max-width: 1465px) {
             h4{
                 font-size: 30px;
@@ -173,9 +202,11 @@
             <div id="small-text">
                 <p>Are you here for the</p>
             </div>
+            <img id="arrow-positioning1" class="arrow-sizing" src="img/arrow.svg">
             <div id="question-box">
                 <h1 id="question-text"><a href="projects.html" class="question-link">Scenic route </a> or did you want to take the
                     <button id="start-button" class="question-link">shortcut?</button></h1>
+                    <img id="arrow-positioning2" class="arrow-sizing" src="img/arrow.svg">
 
             </div>
         </div>
@@ -218,9 +249,9 @@
             <p id="remove-at-vp">Website designed and coded from scratch</p>
         </div>
         <div class="details-text">
-            <a href="#">Instagram</a>
+            <a href="https://www.instagram.com/jtdesignpage?igsh=d2ozN2kxaDZtNzF0&utm_source=qr" target="_blank">Instagram</a>
             <p id="seperator">|</p>
-            <a class="details-text" href="mailto:joetaylorgd25@gmail.com">joetaylorgd25@gmail.com</a>
+            <a class="details-text" href="mailto:joetaylorgd25@gmail.com" target="_blank">joetaylorgd25@gmail.com</a>
         </div>
     </div>
     <!-- ================================================= -->

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereal</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <!-- header section -->
+    <!-- the section-extra was used to add spacing between the line-header and line-enders, which were basically just decorative lines -->
+    <section class="section-extra">
+        <div class="line-header"></div>
+    </section>
+    <div id="header">
+        <h1 id="header-text">Ethereal</h1>
+        <h3>A gallery of surrealism</h3>
+    </div>
+    <section class="section-extra">
+        <div class="line-ender"></div>
+    </section>
+    <!-- the container for the whole body below the header -->
+    <div id="hyper-container">
+        <!-- Start of first column of photos -->
+        <div class="container">
+            <div class="column">
+                <!-- the gallery-style's were used for a way of controlling aspect ratios -->
+                <img class="gallery-style1" src="img/img1.jpeg">
+                <img class="gallery-style2" src="img/img2.jpeg">
+                <img class="gallery-style2" src="img/IMG_3054.jpeg">
+            </div>
+            <!-- second column of photos -->
+            <div class="column">
+                <img class="gallery-style2" src="img/img4.jpeg">
+                <img class="gallery-style2" src="img/img5.jpeg">
+                <img class="gallery-style1" src="img/img6.jpeg">
+            </div>
+            <!-- third column of photos -->
+            <div class="column">
+                <img class="gallery-style2" src="img/img7.jpeg">
+                <img class="gallery-style1" src="img/img8.jpeg">
+                <img class="gallery-style2" src="img/img9.jpeg">
+            </div>
+            <!-- fourth column of photos -->
+            <div class="column">
+                <img class="gallery-style1" src="img/img10.jpeg">
+                <img class="gallery-style1" src="img/img11.jpeg">
+                <img class="gallery-style2" src="img/img12.jpeg">
+            </div>
+        </div>
+        <div id=player-frame>
+            <!-- this creates a frame for which each button can sit and it specifies what the button should do when clicked -->
+            <button onclick="document.getElementById('player').play()">Play</button>
+            <button onclick="document.getElementById('player').pause()">Pause</button>
+            <button onclick="document.getElementById('player').volume += 0.1">Vol +</button>
+            <button onclick="document.getElementById('player').volume -= 0.1">Vol -</button>
+        </div>
+        <!-- footer -->
+        
+        <div id="text-container">
+            <p>A gallery of my personal images that evoke a sense of a dreamlike or surreal atmosphere to me. Inviting
+                viewers to immerse themselves in the captivating and mystical qualities of the natural and digital
+                world.</p>
+        </div>
+        <!-- this specifies what the audio is that will be played -->
+        <audio id="player" src="audio/yl_starz.mp3"></audio>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JTdesignpage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="https://use.typekit.net/itb5qzi.css">
+    <script src="script.js" defer></script>
+    <!-- <script src="header.js" defer></script> -->
+    <style>
+
+        #gallery {
+            width: 96%;
+            margin: 2%;
+            display: flex;
+            flex-direction: column;
+            justify-content: top;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        #slideshow-container {
+            width: 60%;
+
+        }
+         #slideshow-container2 {
+            width: 59%;
+            position: relative;
+
+        }
+
+        #logo-vid {
+            width: 40%;
+        }
+
+        #previous-half,#previous-half2{
+            position: absolute;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            /* background-color: rgb(125, 175, 175); */
+
+        }
+
+
+        #next-half,#next-half2 {
+            position: absolute;
+            top: 0;
+            right: 0%;
+            width: 50%;
+            height: 100%;
+            /* background-color: aqua; */
+
+
+        }
+        .containerstyle3{
+            display: flex;
+            justify-content: center;
+        }
+        .images{
+            width: 32%;
+            margin-inline: 0.5%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ================== header ================== -->
+    <div id="header">
+        <div id="header-title">
+            <a href="index.html">
+                <h1 class="hover-text" id="text-set-1">Joe Taylor</h1>
+            </a>
+        </div>
+        <div id="links">
+            <a href="projects.html" id="text-set-2" class="link-text hover-text">Projects</a>
+            <a href="play.html" id="text-set-3" class="link-text hover-text">Play</a>
+            <a href="info.html" id="text-set-4" class="link-text hover-text">Info</a>
+        </div>
+    </div>
+    <div id="circle"></div>
+    <!-- ================================================= -->
+    <!-- ================== content ================== -->
+    <div id="content-area">
+        <div id="project-title">
+            <a href="projects.html"><img class="arrow" id="back-arrow" src="img/arrow.svg" alt=""></a>
+            <h1>MUSEUM OF PAPER</h1>
+        </div>
+        <div id="project-description">
+            <div class="paragraph">
+                <p>
+                    The museum of paper was my first visual identity project set by the university, and explores and
+                    celebrates the versatility and philosophy of paper, in a modern
+                    and contemporary way, portraying paper in its simple form. Playing with copy and a dynamic logo
+                    across a variety of touchpoints to form an identity that can be used in tandem to create a brand
+                    that is always versitle and flexible, </p>
+            </div>
+            <div class="paragraph">
+                <p> just like paper. The colour scheme is based on the paper-making process and lifecycle. And aims to
+                    look closely at
+                    what paper means to us, being everywhere as a carrier/container for all information. Taking people
+                    away from the general consensus of paper, which people view as just for writing or printing.
+                </p>
+            </div>
+        </div>
+        <div id="gallery">
+            <div class="containerstyle1">
+                <div id="slideshow-container">
+                    <img class="img-slideshow" src="img/museum/museum-01.jpg">
+                    <img class="img-slideshow" src="img/museum/museum-02.jpg" style="display:none;">
+                    <img class="img-slideshow" src="img/museum/museum-03.jpg" style="display:none;">
+                    <img class="img-slideshow" src="img/museum/museum-04.jpg" style="display:none;">
+                    <div id="previous-half"></div>
+                    <div id="next-half"></div>
+                </div>
+                <video id="logo-vid" src="vid/museum/logo.mp4" autoplay loop></video>
+            </div>
+            <div class="containerstyle1">
+                <video id="logo-vid" src="vid/museum/IGpostSQ.mp4" autoplay loop></video>
+                <div id="slideshow-container2">
+                    <img class="img-slideshow2" src="img/museum/museum2-01.jpg">
+                    <img class="img-slideshow2" src="img/museum/museum2-02.jpg" style="display:none;">
+                    <img class="img-slideshow2" src="img/museum/museum2-03.jpg" style="display:none;">
+                    <img class="img-slideshow2" src="img/museum/museum2-04.jpg" style="display:none;">
+                    <div id="previous-half2"></div>
+                    <div id="next-half2"></div>
+                </div>
+            </div>
+            <div class="containerstyle3">
+                <img class="images" src="img/museum/conatinifront copy.png">
+                <img class="images"src="img/museum/front2 copy.png">
+                <img class="images"src="img/museum/Screenshot 2023-02-14 at 17.26.35.png">
+            </div>
+        </div>
+    </div>
+    <div id="next-project">
+        <p>Next project</p>
+        <a href="reportandsupport.html">
+            <h1>REPORT&SUPPORT</h1>
+        </a>
+        <div id="arrow-container">
+            <a href="reportandsupport.html"><img class="arrow" src="img/arrow.svg"></a>
+            <p id="image-seperator">Visual identity, campaign</p>
+        </div>
+    </div>
+
+    <!-- ================================================= -->
+    <!-- ================== footer ================== -->
+    <div id="footer-line"></div>
+    <div id="footer">
+        <div class="details-text">
+            <p id="remove-at-vp">Website designed and coded from scratch</p>
+        </div>
+        <div class="details-text">
+            <a href="https://www.instagram.com/jtdesignpage?igsh=d2ozN2kxaDZtNzF0&utm_source=qr"
+                target="_blank">Instagram</a>
+            <p id="seperator">|</p>
+            <a class="details-text" href="mailto:joetaylorgd25@gmail.com" target="_blank">joetaylorgd25@gmail.com</a>
+        </div>
+    </div>
+    <!-- ================================================= -->
+</body>
+
+</html>
