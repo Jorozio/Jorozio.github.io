@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JTdesignpage</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="https://use.typekit.net/itb5qzi.css">
@@ -36,7 +36,8 @@
         }
 
         #logo-vid {
-            width: 40%;
+            width: 41%;
+            margin-bottom: 1%;
         }
 
         #previous-half,#previous-half2{
@@ -44,10 +45,7 @@
             top: 0;
             width: 50%;
             height: 100%;
-            /* background-color: rgb(125, 175, 175); */
-
         }
-
 
         #next-half,#next-half2 {
             position: absolute;
@@ -55,17 +53,12 @@
             right: 0%;
             width: 50%;
             height: 100%;
-            /* background-color: aqua; */
-
-
         }
-        .containerstyle3{
-            display: flex;
-            justify-content: center;
-        }
-        .images{
-            width: 32%;
-            margin-inline: 0.5%;
+        @media screen and  (max-width: 900px) {
+            #slideshow-container,#slideshow-container2,#logo-vid{
+        width: 99%;
+        padding: 0.5%;
+    }
         }
     </style>
 </head>

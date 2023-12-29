@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JTdesignpage</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="https://use.typekit.net/itb5qzi.css">
@@ -19,22 +19,8 @@
             justify-content: center;
         }
 
-        #poster-vid2 {
-            padding: 1%;
-            width: 65%;
-            height: 650px;
-        }
 
-        #social-vid {
-            width: 50%;
-            padding: 1%;
-            height: 650px;
-        }
 
-        img {
-            width: 70%;
-            object-fit: cover;
-        }
 
         #previous-half {
             position: absolute;
@@ -53,6 +39,26 @@
 
 
         }
+        @media screen and  (max-width: 900px) {
+        #previous-half{
+            position: absolute;
+            top: 0;
+            width: 50%;
+            height: 100%;
+           
+
+        }
+        #next-half {
+            position: absolute;
+            top: 0;
+            right: 0%;
+            width: 50%;
+            height: 100%;
+            /* background-color: aqua; */
+
+
+        }
+    }
     </style>
 </head>
 
@@ -75,7 +81,7 @@
     <!-- ================== content ================== -->
     <div id="content-area">
         <div id="project-title">
-            <a href="projects.html"><img class="arrow" id="back-arrow" src="img/arrow.svg" alt=""></a>
+            <a id="anchor" href="projects.html"><img class="arrow" id="back-arrow" src="img/arrow.svg" alt=""></a>
             <h1>RETRIPPIN</h1>
         </div>
         <div id="project-description">
@@ -124,14 +130,14 @@
                     allowfullscreen></iframe>
             </div>
             <div id="slideshow-container">
-                <img class="img-slideshow" src="img/retrippin/retrippin-01.jpg">
-                <img class="img-slideshow" src="img/retrippin/retrippin-02.jpg" style="display:none;">
-                <img class="img-slideshow" src="img/retrippin/retrippin-03.jpg" style="display:none;">
-                <img class="img-slideshow" src="img/retrippin/retrippin-04.jpg" style="display:none;">
-                <img class="img-slideshow" src="img/retrippin/retrippin-05.jpg" style="display:none;">
-                <img class="img-slideshow" src="img/retrippin/retrippin-06.jpg" style="display:none;">
-                <img class="img-slideshow" src="img/retrippin/retrippin-07.jpg" style="display:none;">
-                <img class="img-slideshow" src="img/retrippin/retrippin-08.jpg" style="display:none;">
+                <img class="img-slideshow retrippinSLDSHW" src="img/retrippin/retrippin-01.jpg">
+                <img class="img-slideshow retrippinSLDSHW" src="img/retrippin/retrippin-02.jpg" style="display:none;">
+                <img class="img-slideshow retrippinSLDSHW" src="img/retrippin/retrippin-03.jpg" style="display:none;">
+                <img class="img-slideshow retrippinSLDSHW" src="img/retrippin/retrippin-04.jpg" style="display:none;">
+                <img class="img-slideshow retrippinSLDSHW" src="img/retrippin/retrippin-05.jpg" style="display:none;">
+                <img class="img-slideshow retrippinSLDSHW" src="img/retrippin/retrippin-06.jpg" style="display:none;">
+                <img class="img-slideshow retrippinSLDSHW" src="img/retrippin/retrippin-07.jpg" style="display:none;">
+                <img class="img-slideshow retrippinSLDSHW" src="img/retrippin/retrippin-08.jpg" style="display:none;">
                 <div id="previous-half"></div>
                 <div id="next-half"></div>
             </div>
@@ -140,7 +146,7 @@
     <div id="next-project">
         <p>Next project</p>
         <a href="museum.html">
-            <h1>MUSEUM OF PAPER</h1>
+            <h1 id="next-project-text">MUSEUM OF PAPER</h1>
         </a>
         <div id="arrow-container">
             <a href="museum.html"><img class="arrow" src="img/arrow.svg"></a>

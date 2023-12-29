@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JTdesignpage</title>
+    <title>Info</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/itb5qzi.css">
     <script src="header.js" defer></script>
@@ -58,9 +58,9 @@
             display: flex;
             flex-direction: row;
         }
-
-
-
+        img{
+            display: none;
+        }
 
         .paddingI {
             padding-left: 4%;
@@ -130,21 +130,32 @@
             }
         }
 
-        @media screen and (max-width: 720px) {
-
-#content-area {
-    display: none;
-}
-#error-message{
- display: flex;
- height: 100vh;
-}
-#error{
- width: 60%;
- text-align: center;
- padding-top: 2%;
-}
-
+        @media screen and (max-width: 620px) {
+            #top-contentI{
+                display: none;
+            }
+            #content-area{
+                height: 100vh;
+            }
+            #bot-contentI{
+                flex-direction: column;
+            }
+            #start-structureI{
+                width: 80%;
+            }
+            #padding-inlineI{
+                padding: 4%;
+                padding-top: 0;
+                margin-top: 0;
+            }
+            img{
+                display: inline-block;
+                width: 90%;
+                height: 350px;
+                object-fit: cover;
+                margin-left: 5%;
+                /* margin-bottom: 2vh; */
+            }
 }
     </style>
 </head>
@@ -165,10 +176,10 @@
     </div>
     <div id="circle"></div>
     <!-- ================================================= -->
-    <div id="error-message">
+    <!-- <div id="error-message">
         <h4>Whoops!</h4>
         <p id="error">This page isn't yet optimised for this display size yet!</p>
-    </div>
+    </div> -->
 <div id="content-area">
     <div id="top-contentI">
         <div id="top-textI">
@@ -204,6 +215,7 @@
         </div>
 
     </div>
+    <img src="img/me.png" alt="">
 </div>
 
     <!-- ================== footer ================== -->

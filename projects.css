@@ -30,6 +30,7 @@
     width: 40%;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     margin-left: 4%;
 }
 h1{line-height: 80%;
@@ -55,16 +56,27 @@ a{user-select: none;}
     justify-content: left;
 }
 
-
+#social-vid {
+    width: 50%;
+    padding: 1%;
+    height: 650px;
+}
 #logo-vid{
     width: 37%;
 }
 #poster-vid{
     width: 63%;
 }
+#poster-vid2 {
+    padding: 1%;
+    width: 65%;
+    height: 650px;
+}
 .containerstyle1{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 1%;
   
 }
@@ -72,6 +84,10 @@ a{user-select: none;}
     width: 98%;
     margin-left: 1%;
     margin-bottom: 1%;
+}
+.containerstyle3{
+    display: flex;
+    justify-content: center;
 }
 #slideshow-container{
     width: 98%;
@@ -94,8 +110,15 @@ video{
     margin-bottom: 1%;
     margin-left: 1%;
 }
-
-
+.retrippinSLDSHW {
+    width: 70%;
+    object-fit: cover;
+}
+     
+.images{
+    width: 32%;
+    margin-inline: 0.5%;
+}
 #next-half:hover,#next-half2:hover {
     cursor: url('img/cursor/cursorarrow-02.png'), e-resize;
   }
@@ -103,3 +126,55 @@ video{
     cursor: url('img/cursor/cursorarrow-01.png'), w-resize;
   }
 
+  @media screen and  (max-width: 900px) {
+    .containerstyle2,.containerstyle1,.containerstyle3{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+    .arrow{
+        width: 4.5vw;
+        margin-top: 10px;
+    }
+    #project-description,.paragraph{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2%;
+    }
+    #project-title{
+        width: 70%;
+    }
+    #next-project{
+        width: 70%;
+    }
+    h1{
+        font-size: 60px;
+    }
+    #next-project-text{
+        font-size: 50px;
+    }
+    #social-vid,#poster-vid2,#poster-vid, #logo-vid, #next-project{
+        width: 99%;
+        margin: 1%;
+        padding: 1%;
+        /* background-color: aqua; */
+    }
+    #slideshow-container,#slideshow-container2,.images{
+        width: 99%;
+        padding: 0.5%;
+    }
+    .retrippinSLDSHW {
+        width: 99%;
+    }
+    
+   
+  }
+  @media screen and  (max-width: 700px) {
+    h1{
+        font-size: 40px;
+    }
+    #project-title{
+        width: 90%;
+    }
+  }

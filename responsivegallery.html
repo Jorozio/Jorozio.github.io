@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JTdesignpage</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="https://use.typekit.net/itb5qzi.css">
     <script src="script.js" defer></script>
     <!-- <script src="header.js" defer></script> -->
     <style>
- 
         #gallery {
             width: 96%;
             margin: 2%;
@@ -22,8 +21,9 @@
 
         iframe {
             resize: both;
-            direction: rtl;
-          
+            direction: ltr;
+            width: 1400px;
+            height: 700px;
             overflow: auto;
             border: white 1px solid;
             min-width: 400px;
@@ -38,6 +38,27 @@
         #tag-text {
             margin-bottom: 1%;
             margin-left: 1%;
+        }
+
+        @media screen and (max-width: 900px) {
+            iframe {
+                width: 500px;
+                height: 700px;
+            }
+
+            #tag-text {
+                padding-block: 1%;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            iframe {
+                width: 300px;
+            }
+
+            #tag-text{
+                padding-left: 5%;
+            }
         }
     </style>
 </head>
@@ -67,25 +88,17 @@
         <div id="project-description">
             <div class="paragraph">
                 <p>
-                    The museum of paper was my first visual identity project set by the university, and explores and
-                    celebrates the versatility and philosophy of paper, in a modern
-                    and contemporary way, portraying paper in its simple form. Playing with copy and a dynamic logo
-                    across a variety of touchpoints to form an identity that can be used in tandem to create a brand
-                    that is always versitle and flexible, </p>
-            </div>
-            <div class="paragraph">
-                <p> just like paper. The colour scheme is based on the paper-making process and lifecycle. And aims to
-                    look closely at
-                    what paper means to us, being everywhere as a carrier/container for all information. Taking people
-                    away from the general consensus of paper, which people view as just for writing or printing.
-                </p>
+                    For one of my initial creative coding projects, I looked into the importance of designing for
+                    diverse devices. It was my first web building project and it was centred around ethereal photo
+                    themes, the site showcases a few of my personal photos. This project sparked my consideration for
+                    user interactivity, prompting me to explore the dynamic relationship between design and user
+                    experience.</p>
             </div>
         </div>
         <div id="gallery">
             <div>
                 <p id="tag-text">Try and resize me!</p>
-                <iframe style="width: 1400px; height: 700px;" src="Responsive_gallery/index.html"
-                    frameborder="0"></iframe>
+                <iframe src="Responsive_gallery/index.html" frameborder="0"></iframe>
             </div>
         </div>
     </div>

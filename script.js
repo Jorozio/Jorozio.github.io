@@ -307,6 +307,13 @@ if (window.location.pathname === '/projects.html') {
     let video = document.querySelector("#video");
     let container = document.querySelector(".containerstyle3");
   
+      
+        let pElement = document.getElementById('tag-text');
+        if (window.innerWidth <= 900) {
+            pElement.innerHTML = "Sorry! This works best on bigger screens...";
+        } else {
+            pElement.innerHTML = "Move mouse left to right to look through code.";
+        }   
   
     container.addEventListener('mousemove', function(event) {
         let rect = this.getBoundingClientRect();
@@ -337,4 +344,11 @@ function type() {
 // Call the type function every 200 milliseconds
 setInterval(type, 800);
      }
- 
+ if(window.location.pathname === '/responsivegallery.html'){
+        let pElement = document.getElementById('tag-text');
+        if (window.innerWidth <= 900) {
+            pElement.innerHTML = "Sorry! This works best on bigger screens...";
+        } else {
+            pElement.innerHTML = "Try and resize me!";
+        }
+    }
