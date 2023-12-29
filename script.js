@@ -1,12 +1,11 @@
 // ============================= index =============================
-if (window.location.pathname === '/index.html') {
+if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
 let shortcut = document.getElementById("start-button")
 let questionDiv = document.getElementById("question-container")
 let welcome = Array.from(document.getElementsByClassName("welcome-text"))
 let backgroundVideo = document.getElementById("background-video")
 let description = document.getElementById("description-container")
 let contentArea = document.getElementById("content-area")
-let arrows = document.getElementsByClassName("arrow-sizing")
 shortcut.addEventListener('click', () => {
    questionDiv.classList.add('hidden')
    welcome.forEach((item, index) => {
