@@ -16,9 +16,21 @@
             margin: 2%;
             display: flex;
             flex-direction: column;
+            justify-content: right;
             align-items: center;
         }
-
+        #iframe-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items:flex-end;
+        }
+        #text-holder{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            width: 100%;
+        }
         iframe {
             resize: both;
             direction: ltr;
@@ -36,7 +48,12 @@
         }
 
         #tag-text {
-            margin-bottom: 1%;
+            margin-top: 1%;
+            margin-left: 1%;
+        }
+        img{
+            width: 25px;
+            rotate: 180deg;
             margin-left: 1%;
         }
 
@@ -57,7 +74,7 @@
             }
 
             #tag-text{
-                padding-left: 5%;
+                padding-right: 5%;
             }
         }
     </style>
@@ -96,9 +113,12 @@
             </div>
         </div>
         <div id="gallery">
-            <div>
-                <p id="tag-text">Try and resize me!</p>
+            <div id="iframe-container">
                 <iframe src="Responsive_gallery/index.html" frameborder="0"></iframe>
+                <div id="text-holder">
+                <p id="tag-text">Try and resize me!</p>
+                <img src="img/arrow.svg" alt="">
+            </div>
             </div>
         </div>
     </div>

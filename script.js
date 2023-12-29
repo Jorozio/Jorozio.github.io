@@ -1,27 +1,27 @@
 // ============================= index =============================
 if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
-let shortcut = document.getElementById("start-button")
-let questionDiv = document.getElementById("question-container")
-let welcome = Array.from(document.getElementsByClassName("welcome-text"))
-let backgroundVideo = document.getElementById("background-video")
-let description = document.getElementById("description-container")
-let contentArea = document.getElementById("content-area")
-shortcut.addEventListener('click', () => {
-   questionDiv.classList.add('hidden')
-   welcome.forEach((item, index) => {
-       setTimeout(() => {
-           item.classList.remove('hidden');
-       }, index * 300); 
-              setTimeout(() => {
+    let shortcut = document.getElementById("start-button")
+    let questionDiv = document.getElementById("question-container")
+    let welcome = Array.from(document.getElementsByClassName("welcome-text"))
+    let backgroundVideo = document.getElementById("background-video")
+    let description = document.getElementById("description-container")
+    let contentArea = document.getElementById("content-area")
+    shortcut.addEventListener('click', () => {
+        questionDiv.classList.add('hidden')
+        welcome.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.remove('hidden');
+            }, index * 300);
+            setTimeout(() => {
                 backgroundVideo.style.display = "block"
-       }, 1300);       setTimeout(() => {
-        contentArea.style.justifyContent = "right"
-        description.style.display = "block"
-       }, 3000);
-       
-   })
-   
-});
+            }, 1300); setTimeout(() => {
+                contentArea.style.justifyContent = "right"
+                description.style.display = "block"
+            }, 3000);
+
+        })
+
+    });
 
 }
 
@@ -117,7 +117,7 @@ if (window.location.pathname === '/projects.html') {
         window.location.href = "retrippin.html";
     })
 
-     museum.addEventListener('click', () => {
+    museum.addEventListener('click', () => {
         window.location.href = "museum.html";
     })
 
@@ -264,90 +264,114 @@ if (window.location.pathname === '/projects.html') {
     creativeCoding.addEventListener('click', () => filterAndDisplayContainers('creative-coding'));
 
 }
-   // ===================================================================
-   if(window.location.pathname === '/museum.html' || window.location.pathname === '/retrippin.html' || window.location.pathname === '/reportandsupport.html'){
-   let slides = Array.from(document.getElementsByClassName("img-slideshow"));
-   let slides2 = Array.from(document.getElementsByClassName("img-slideshow2"));
-   
-   let currentSlideIndex = 0;
-   let currentSlideIndex2 = 0;
-   
-   document.getElementById('previous-half').addEventListener('click', showPreviousSlide);
-   document.getElementById('next-half').addEventListener('click', showNextSlide);
-   document.getElementById('previous-half2').addEventListener('click', showPreviousSlide2);
-   document.getElementById('next-half2').addEventListener('click', showNextSlide2);
-   
-   function showNextSlide() {
-      slides[currentSlideIndex].style.display = "none";
-      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-      slides[currentSlideIndex].style.display = "block";
-   }
-   
-   function showPreviousSlide() {
-      slides[currentSlideIndex].style.display = "none";
-      currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
-      slides[currentSlideIndex].style.display = "block";
-   }
-   
-   function showNextSlide2() {
-      slides2[currentSlideIndex2].style.display = "none";
-      currentSlideIndex2 = (currentSlideIndex2 + 1) % slides2.length;
-      slides2[currentSlideIndex2].style.display = "block";
-   }
-   
-   function showPreviousSlide2() {
-      slides2[currentSlideIndex2].style.display = "none";
-      currentSlideIndex2 = (currentSlideIndex2 - 1 + slides2.length) % slides2.length;
-      slides2[currentSlideIndex2].style.display = "block";
-   }
+// ===================================================================
+if (window.location.pathname === '/museum.html' || window.location.pathname === '/retrippin.html' || window.location.pathname === '/reportandsupport.html') {
+    let slides = Array.from(document.getElementsByClassName("img-slideshow"));
+    let slides2 = Array.from(document.getElementsByClassName("img-slideshow2"));
+
+    let videoElement = document.querySelector('video');
+    if (window.innerWidth <= 700) {
+        videoElement.controls = true;
+        videoElement.autoplay = false;
+    } else {
+        videoElement.controls = false;
+        videoElement.autoplay = true;
+    }
+
+    let currentSlideIndex = 0;
+    let currentSlideIndex2 = 0;
+
+    let PrevPress = document.getElementById('previous-half')
+    let PrevPress2 = document.getElementById('previous-half2')
+
+    PrevPress2.addEventListener('click', showPreviousSlide2);
+    PrevPress2.addEventListener('touchstart', showPreviousSlide2)
+
+    PrevPress.addEventListener('click', showPreviousSlide);
+    PrevPress.addEventListener('touchstart', showPreviousSlide)
+
+    let NextPress = document.getElementById('next-half')
+    let NextPress2 = document.getElementById('next-half2')
+
+    NextPress.addEventListener('click', showNextSlide);
+    NextPress.addEventListener('touchstart', showNextSlide)
+
+    NextPress2.addEventListener('click', showNextSlide2);
+    NextPress2.addEventListener('touchstart', showNextSlide2);
+
+
+
+    function showNextSlide() {
+        slides[currentSlideIndex].style.display = "none";
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        slides[currentSlideIndex].style.display = "block";
+    }
+
+    function showPreviousSlide() {
+        slides[currentSlideIndex].style.display = "none";
+        currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+        slides[currentSlideIndex].style.display = "block";
+    }
+
+    function showNextSlide2() {
+        slides2[currentSlideIndex2].style.display = "none";
+        currentSlideIndex2 = (currentSlideIndex2 + 1) % slides2.length;
+        slides2[currentSlideIndex2].style.display = "block";
+    }
+
+    function showPreviousSlide2() {
+        slides2[currentSlideIndex2].style.display = "none";
+        currentSlideIndex2 = (currentSlideIndex2 - 1 + slides2.length) % slides2.length;
+        slides2[currentSlideIndex2].style.display = "block";
+    }
 }
-   // ===================================================================
-   if(window.location.pathname === '/digitalnarrative.html'){
+// ===================================================================
+if (window.location.pathname === '/digitalnarrative.html') {
     let video = document.querySelector("#video");
     let container = document.querySelector(".containerstyle3");
-  
-      
-        let pElement = document.getElementById('tag-text');
-        if (window.innerWidth <= 900) {
-            pElement.innerHTML = "Sorry! This works best on bigger screens...";
-        } else {
-            pElement.innerHTML = "Move mouse left to right to look through code.";
-        }   
-  
-    container.addEventListener('mousemove', function(event) {
+
+
+    let pElement = document.getElementById('tag-text');
+    if (window.innerWidth <= 900) {
+        pElement.innerHTML = "Sorry! This works best on bigger screens...";
+    } else {
+        pElement.innerHTML = "Move mouse left to right to look through code.";
+    }
+
+    container.addEventListener('mousemove', function (event) {
         let rect = this.getBoundingClientRect();
         let x = event.clientX - rect.left; // x position within the element.
         video.currentTime = x / rect.width * video.duration;
-       });
+    });
 
-     }
-
-     if(window.location.pathname === '/DTC.html'){
-        let i = 0; // Initial index
-let str = "..."; // String to be typed
-let el = document.getElementById('dotdotdot'); // Element to display the string
-
-// Function to animate the typing effect
-function type() {
-   if (i < str.length) {
-       el.innerHTML += str.charAt(i);
-       i++;
-   }
-   else {
-       // Clear the element and reset the index
-       el.innerHTML = '';
-       i = 0;
-   }
 }
 
-// Call the type function every 200 milliseconds
-setInterval(type, 800);
-     }
- if(window.location.pathname === '/responsivegallery.html'){
-        let pElement = document.getElementById('tag-text');
-        if (window.innerWidth <= 900) {
-            pElement.innerHTML = "Sorry! This works best on bigger screens...";
-        } else {
-            pElement.innerHTML = "Try and resize me!";
+if (window.location.pathname === '/DTC.html') {
+    let i = 0; // Initial index
+    let str = "..."; // String to be typed
+    let el = document.getElementById('dotdotdot'); // Element to display the string
+
+    // Function to animate the typing effect
+    function type() {
+        if (i < str.length) {
+            el.innerHTML += str.charAt(i);
+            i++;
+        }
+        else {
+            // Clear the element and reset the index
+            el.innerHTML = '';
+            i = 0;
         }
     }
+
+    // Call the type function every 200 milliseconds
+    setInterval(type, 800);
+}
+if (window.location.pathname === '/responsivegallery.html') {
+    let pElement = document.getElementById('tag-text');
+    if (window.innerWidth <= 900) {
+        pElement.innerHTML = "Sorry! This works best on bigger screens...";
+    } else {
+        pElement.innerHTML = "Try and resize me!";
+    }
+}
