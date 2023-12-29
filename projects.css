@@ -90,12 +90,16 @@ video{
 #slideshow-container{
     position: relative;
 }
+#tag-text {
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
 
 
 #next-half:hover,#next-half2:hover {
-    cursor: e-resize;
+    cursor: url('img/cursor/cursorarrow-02.png'), e-resize;
   }
   #previous-half:hover,#previous-half2:hover {
-    cursor: w-resize;
+    cursor: url('img/cursor/cursorarrow-01.png'), w-resize;
   }
 
