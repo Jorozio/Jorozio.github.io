@@ -110,10 +110,7 @@ video{
     margin-bottom: 1%;
     margin-left: 1%;
 }
-.retrippinSLDSHW {
-    width: 70%;
-    object-fit: cover;
-}
+
      
 .images{
     width: 32%;
@@ -164,10 +161,6 @@ video{
         width: 99%;
         padding: 0.5%;
     }
-    .retrippinSLDSHW {
-        width: 99%;
-    }
-    
    
   }
   @media screen and  (max-width: 700px) {

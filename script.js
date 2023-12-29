@@ -281,23 +281,17 @@ if (window.location.pathname === '/museum.html' || window.location.pathname === 
     let currentSlideIndex = 0;
     let currentSlideIndex2 = 0;
 
-    let PrevPress = document.getElementById('previous-half')
-    let PrevPress2 = document.getElementById('previous-half2')
 
-    PrevPress2.addEventListener('click', showPreviousSlide2);
-    PrevPress2.addEventListener('touchstart', showPreviousSlide2)
 
-    PrevPress.addEventListener('click', showPreviousSlide);
-    PrevPress.addEventListener('touchstart', showPreviousSlide)
+    document.getElementById('previous-half').addEventListener('touchstart', showPreviousSlide2);
+    document.getElementById('previous-half').addEventListener('click', showPreviousSlide2);
+    document.getElementById('next-half').addEventListener('click', showNextSlide);
+    document.getElementById('next-half').addEventListener('touchstart', showNextSlide)
 
-    let NextPress = document.getElementById('next-half')
-    let NextPress2 = document.getElementById('next-half2')
-
-    NextPress.addEventListener('click', showNextSlide);
-    NextPress.addEventListener('touchstart', showNextSlide)
-
-    NextPress2.addEventListener('click', showNextSlide2);
-    NextPress2.addEventListener('touchstart', showNextSlide2);
+    document.getElementById('next-half2').addEventListener('click', showNextSlide2);
+    document.getElementById('next-half2').addEventListener('touchstart', showNextSlide2);
+    document.getElementById('previous-half2').addEventListener('click', showPreviousSlide2);
+    document.getElementById('previous-half2').addEventListener('touchstart', showPreviousSlide2)
 
 
 
