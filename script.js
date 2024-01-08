@@ -65,31 +65,65 @@ if (window.location.pathname === '/info.html') {
 
 // ============================== Play ============================
 if (window.location.pathname === '/play.html') {
+// Get all the videos
+const video1 = document.getElementById("position1")
+const video3 = document.getElementById("position3")
 
-    let videosP5js = Array.from(document.getElementsByClassName("video-p5js"));
-    let play = document.getElementById("index-video")
-    setTimeout(() => {
-
-
-        setInterval(() => {
-            let randomIndex = Math.floor(Math.random() * videosP5js.length);
-            toggleVisibility(videosP5js[randomIndex]);
-        }, 500);
-
-        toggleVisibility = (videoElement) => {
-            if (videoElement.style.display === "block") {
+const video4 = document.getElementById("position4");
+const video5 = document.getElementById("position5");
+const videoBig = document.getElementById("marching")
+const Observer1 = document.getElementById("text-container")
+const Observer4 = document.getElementById("cursor-squares");
+const Observer5 = document.getElementById("cursor-squares");
 
 
-            } else {
-                videoElement.style.display = "block";
-            }
-        }
-    }, 2000);
+let observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+     if (entry.isIntersecting) {
+       video1.style.display = 'block';
+     } else {
+       video1.style.display = 'none';
+     }
+    });
+   }, {
+    threshold: 0.1
+   });
+
+   let observer2 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+        videoBig.style.opacity = '0';
+        video5.style.display = 'block';
+        setTimeout(() => {  video4.style.display = 'block';}, 500);
+        // setTimeout(() => {  video3.style.display = 'block';}, 1000);
+
+    } else {
+        // video3.style.display = 'none'
+      video4.style.display = 'none';
+      video5.style.display = 'none';
+      videoBig.style.opacity = '30';
+
+    }
+    });
+   }, {
+    threshold: 0.01 
+   });
+   observer.observe(Observer1);
+   observer2.observe(Observer4);
+observer2.observe(Observer5);
+
+   
 
 
-    setTimeout(() => {
-        play.style.display = "none"
-    }, 6500);
+    
+    window.addEventListener('wheel', function(e) {
+        e.preventDefault(); // Prevent vertical scrolling
+        window.scrollBy({
+          left: e.deltaY,
+          top: 0,
+          
+        });
+       });
 }
 
 // ================================================================

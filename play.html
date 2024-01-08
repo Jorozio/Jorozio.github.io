@@ -12,145 +12,201 @@
     <link rel="icon" type="image/x-icon" href="/img//favicon/favicon5.png">
 
     <style>
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1%;
+        }
+
+        #circle {
+            position: fixed;
+        }
+
+        body {
+            padding-top: 110px;
+            cursor: url('img/cursor/cursorarrow-02.png'), e-resize;
+            height: 95%;
+        }
+
+        h4 {
+            font-size: 4.9vh;
+        }
+
         #video-space {
-            width: 100%;
-            height: 90.5vh;
+            z-index: -1;
+            width: 20%;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            position: relative;
         }
 
-        #arrow-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        #index-video {
             position: absolute;
-            height: 20.5vh;
-            bottom: 0;
+            left: 2%;
+            width: 70vw;
+            height: auto;
+            object-fit: cover;
         }
 
-        #gallery {
-            height: 175.5vh;
+        #keep-going1,
+        #keep-going2,
+        #keep-going3 {
+            position: absolute;
+            width: 400px;
+            height: 35vh;
+            /* background-color: aqua; */
+            rotate: -90deg;
+
+        }
+
+        #keep-going1 {
+            left: 74%;
+            bottom: 8%;
+
+
+        }
+
+        #keep-going2 {
+            left: 120%;
+            top: 15%;
+
+        }
+
+        #keep-going3 {
+            left: 260%;
+            bottom: 6%;
+
+        }
+
+
+
+        #content-area {
+            white-space: nowrap;
+            overflow-x: auto;
+            width: 560%;
             display: flex;
-            /* use row for desktop and tablet layout */
             flex-direction: row;
-            flex-wrap: wrap;
-            padding: 4%;
+            height: 87vh;
         }
 
-        #vid-seperator {
-            width: 100%;
-            height: 20px;
+
+        #text-container {
+            width: 650px;
+            height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            white-space: normal;
+            margin: 0.6%;
+            margin-top: 0.1%;
+            margin-left: 10%;
+        }
+
+        #text-container2 {
+            width: 540px;
+            display: flex;
+            flex-wrap: wrap;
+            white-space: normal;
+            margin: 0.6%;
+            margin-top: 4%;
+            margin-right: 10%;
         }
 
         .video-p5js {
             object-fit: contain;
             width: 80%;
             position: absolute;
-            z-index: -1;
-            display: none;
+            /* display: none; */
         }
-
-        #index-video {
-            z-index: -2;
+        #para-link{
+        
+    font-family: degular-display, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 4.9vh;
+    text-decoration: underline;
         }
 
         #position1 {
-            top: 25%;
-            left: 40%;
+            top: 24%;
+            left: 92%;
+            width: 65vh;
+            height: 35vw;
+            display: none;
+            z-index: -2;
         }
 
         #position2 {
-            bottom: 5%;
-            right: 30%;
+            width: 46vw;
+            height: 83vh;
+            margin-top: 0.2%;
+            margin-left: 1%;
         }
 
-        #position3 {
-            bottom: 40%;
-            right: 40%;
-        }
 
         #position4 {
-            bottom: 35%;
-            right: 0%;
+            bottom: 1.8%;
+            /* background-color: aqua; */
+            left: 301.3%;
+            width: 23vw;
+            height: 45vh;
         }
 
         #position5 {
-            bottom: 15%;
-            right: 10%;
+            top: 11.5%;
+            left: 278.25%;
+            width: 23vw;
+            height: 45vh;
+
+        }
+
+        #marching,
+        #image-pixelator {
+            padding: 0.2%;
+            opacity: 100;
+            z-index: -1;
+        }
+
+        #image-pixelator {
+            width: 1090px;
+            margin-left: 18%
         }
 
 
-        #content-area {
-            height: 240.5vh;
+        #cursor-squares {
+            padding: 0.2%;
+            margin-left: 13.5%;
         }
 
-        #play-container {
-   height: 70.5vh;
-   display: flex;
-   flex-direction: row;
-   justify-content: right;
-   margin-top: 7%;
-}
+        @media screen and (max-width: 1000px) {
 
-#p5jsexample {
-   width: 47%;
-   margin-left: 7%;
-}
+            #content-area {
+                display: none;
+            }
 
-#text-container {
-   height: 70.5vh;
-   width: 38%;
-   margin-top: 2%;
-   margin-right: 4%;
-   margin-left: 2%;
-}
+            #error-message {
+                display: flex;
+                height: 100vh;
+            }
 
-@media screen and (max-width: 1408px) {
-   #play-container {
-       flex-direction: column;
-   }
+            #error {
+                width: 60%;
+                text-align: center;
+                padding-top: 2%;
+            }
 
-   #p5jsexample {
-       width: 100%;
-       margin-inline: 20%;
-   }
+        }
 
-   #text-container {
-       width: 60%;
-       margin-inline: 20%;
-       margin-top: 2%;
-   }
-   h4{
-    font-size: 40px;
-   }
-}
-@media screen and (max-width: 1000px) {
-
-   #content-area {
-       display: none;
-   }
-  #error-message{
-    display: flex;
-    height: 100vh;
-  }
-  #error{
-    width: 60%;
-    text-align: center;
-    padding-top: 2%;
-  }
-
-}
-@media screen and (max-width: 450px) {
+        @media screen and (max-width: 450px) {
 
 
-#error-message{
- height: 70vh;
-}
+            #error-message {
+                height: 70vh;
+            }
 
-}
+        }
     </style>
 </head>
 
@@ -177,46 +233,39 @@
     </div>
     <div id="content-area">
         <div id="video-space">
-            <video id="index-video" width="1600" height="670" autoplay loop>
+            <video id="index-video" width="1800" height="770" autoplay loop>
                 <source src="vid/play.mp4" type="video/mp4" autoplay loop>
             </video>
-            <video class="video-p5js" id="position2" src="vid/p5js1.mov" autoplay loop muted></video>
-            <video class="video-p5js" id="position3" src="vid/p5js4.mov" autoplay loop muted></video>
-            <video class="video-p5js" id="position4" src="vid/p5js2.mov" autoplay loop muted></video>
-            <video class="video-p5js" id="position5" src="vid/p5js2.5.mov" autoplay loop muted></video>
-            <video class="video-p5js" id="position1" src="vid/p5js3.mov" autoplay loop muted></video>
+            <img id="keep-going1" src="img/arrow.svg" alt="">
+            <img id="keep-going2" src="img/arrow.svg" alt="">
         </div>
-        <div id="play-container">
-            <div id="p5jsexample">
-                <iframe width="770" height="635" src="https://www.youtube.com/embed/HRDohsnuSek?si=mnPYjjuNAWF7G09C"
-                    title="YouTube video player" frameborder="0"
-                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>   
-            </div>
-            <div id="text-container">
-                <h4>For me, learning to have fun through play provides so much inspiration for tackling real world
-                    issues
-                    and problems. The world is so serious and for good reason, but it’s nice to have a break from that
-                    to focus on growing skills and then coming back to see how these skills can apply and help solve
-                    these issues.</h4>
-            </div>
-        </div>
-      
+        <div id="text-container">
+            <h4>For me, learning to have fun through play provides so much inspiration for tackling real world
+                issues
+                and problems. The world is so serious and for good reason, but it’s nice to have a break from that
+                to focus on growing skills and then coming back to see how these skills can apply and help solve
+                these issues.</h4>
 
+        </div>
+        <video class="video-p5js" id="position1" src="vid/p5js1.mov" autoplay loop muted></video>
+        <video class="video-p5js" id="position4" src="vid/p5js2.mov" autoplay loop muted></video>
+        <video class="video-p5js" id="position5" src="vid/p5js2.5.mov" autoplay loop muted></video>
+        <video id="marching" src="vid/marchingsquares.mov" autoplay loop muted></video>
+        <img id="keep-going3" src="img/arrow.svg" alt="">
+        <video id="cursor-squares" src="vid/cursorsquare.mov" autoplay loop muted></video>
+        <video id="position2" src="vid/p5js3.mov" autoplay loop muted></video>
+        <!-- <iframe id="image-pixelator" src="https://www.youtube.com/embed/chrjmc5AwuU?si=uUSRdKtOAb8ZHp8P"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe> -->
+        <div id="text-container2">
+            <h4>Keep your eye out! This page is always getting updated with my latest personal projects and workshops
+                from University. If you like what you see, check out <a id="para-link" href="https://www.instagram.com/jtdesignpage?igsh=d2ozN2kxaDZtNzF0&utm_source=qr" target="_blank">my instagram</a> for more examples of stuff I couldnt fit on here!</h4>
+
+        </div>
     </div>
     <!-- ================================================= -->
-    <!-- ================== footer ================== -->
-    <div id="footer-line"></div>
-    <div id="footer">
-        <div class="details-text">
-            <p id="remove-at-vp">Website designed and coded from scratch</p>
-        </div>
-        <div class="details-text">
-            <a href="https://www.instagram.com/jtdesignpage?igsh=d2ozN2kxaDZtNzF0&utm_source=qr" target="_blank">Instagram</a>
-            <p id="seperator">|</p>
-            <a href="mailto:joetaylorgd25@gmail.com" target="_blank">joetaylorgd25@gmail.com</a>
-        </div>
-    </div>
-    <!-- ================================================= -->
+
 </body>
 
 </html>
