@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ozone</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="libraries/p5.min.js"></script>
+</head>
+
+<body>
+  <img id='error-img' src="img/Screenshot 2024-03-18 at 15.13.41.png">
+  <div id="error-txt"><p>sorry!</p><br><p>This works best in the latest version of chrome due to the experimental
+    features that variable fonts use, please copy this link and paste it there.</p></div>
+    <!-- actual context -->
+  <!-- <h1 id="icon">O</h1> -->
+  
+<div id="master-container">
+<div id="option-holder">
+  <select id="ozone-option">
+    <option value="start">Ozone Modifiers</option>
+    <option value="driving">Driving</option>
+    <option value="aircon">Air conditioning</option>
+    <option value="commerse">Commerce</option>
+  </select>
+</div>
+div
+  <p id="title-text"></p>
+  <div id="js-text">  <p id="first-half"></p> <p id="second-half"></p>
+  </div>
+</div>
+  <div id="p-holder">
+    <p id="paragraph">Adjust the slider to visualize the scale of ozone layer depletion caused by various everyday human activities.
+      The size of the damage reflects the amount of harmful substances released into the atmosphere, contributing to
+      ozone depletion. </p>
+  </div>
+
+  <script src="sketch.js"></script>
+  <script src="browser.js"></script>
+
+</body>
+
+</html>
