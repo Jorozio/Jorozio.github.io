@@ -357,8 +357,6 @@ if (window.location.pathname === '/museum.html' || window.location.pathname === 
 }
 // ===================================================================
 if (window.location.pathname === '/digitalnarrative.html') {
-    let video = document.querySelector("#video");
-    let container = document.querySelector(".containerstyle3");
 
 
     let pElement = document.getElementById('tag-text');
@@ -368,15 +366,10 @@ if (window.location.pathname === '/digitalnarrative.html') {
         pElement.innerHTML = "Move mouse left to right to look through code.";
     }
 
-    container.addEventListener('mousemove', function (event) {
-        let rect = this.getBoundingClientRect();
-        let x = event.clientX - rect.left; // x position within the element.
-        video.currentTime = x / rect.width * video.duration;
-    });
 
 }
 
-if (window.location.pathname === '/operationOzone.html') {
+if (window.location.pathname === '/SADAAC.html') {
     let i = 0; // Initial index
     let str = "..."; // String to be typed
     let el = document.getElementById('dotdotdot'); // Element to display the string
