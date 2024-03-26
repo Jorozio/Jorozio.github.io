@@ -142,7 +142,8 @@ if (window.location.pathname === '/projects.html') {
     let report = document.getElementById("report")
     let responsive = document.getElementById("responsive")
     let digital = document.getElementById("digital")
-    let dtc = document.getElementById("dtc")
+    let parklane = document.getElementById("parklane")
+    let SADAAC = document.getElementById("SADAAC")
 
     retrippin.addEventListener('click', () => {
         window.location.href = "retrippin.html";
@@ -153,7 +154,7 @@ if (window.location.pathname === '/projects.html') {
     })
 
     report.addEventListener('click', () => {
-        window.location.href = "reportandsupport.html";
+        window.location.href = "operationOzone.html";
     })
 
     responsive.addEventListener('click', () => {
@@ -164,8 +165,12 @@ if (window.location.pathname === '/projects.html') {
         window.location.href = "digitalnarrative.html";
     })
 
-    dtc.addEventListener('click', () => {
-        window.location.href = "DTC.html";
+    parklane.addEventListener('click', () => {
+        window.location.href = "parklane.html";
+    })
+
+    SADAAC.addEventListener('click', () => {
+        window.location.href = "SADAAC.html";
     })
 
 
@@ -371,7 +376,7 @@ if (window.location.pathname === '/digitalnarrative.html') {
 
 }
 
-if (window.location.pathname === '/DTC.html') {
+if (window.location.pathname === '/operationOzone.html') {
     let i = 0; // Initial index
     let str = "..."; // String to be typed
     let el = document.getElementById('dotdotdot'); // Element to display the string

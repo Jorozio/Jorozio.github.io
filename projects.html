@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/itb5qzi.css">
     <link rel="icon" type="image/x-icon" href="/img//favicon/favicon2.png">
-   
+
     <script src="script.js" defer></script>
     <script src="header.js" defer></script>
     <style>
         #PAGE-HEIGHT {
-            height: 180vh;
+            height: 220vh;
         }
 
         #sortby-container {
@@ -22,7 +22,7 @@
             display: flex;
             align-items: end;
             padding-left: 7%;
-          
+
 
         }
 
@@ -34,7 +34,7 @@
             font-size: 50px;
             padding-bottom: 1%;
             padding-left: -5%;
-            
+
         }
 
         #child-container {
@@ -50,7 +50,7 @@
             /* background-color: #52a8ff; */
         }
 
-     
+
 
         .tag,
         .tag-special {
@@ -101,7 +101,7 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            
+
 
         }
 
@@ -149,7 +149,7 @@
             width: 200px;
             display: flex;
             justify-content: center;
-           
+
             /* border: 1px solid white; */
         }
 
@@ -172,7 +172,7 @@
             top: 24%;
         }
 
-        #mid-text {
+        .mid-text {
             position: absolute;
             top: 29%;
         }
@@ -181,34 +181,39 @@
             #tag-container {
                 width: 100%;
             }
+
             #project-container {
                 padding-top: 0%;
             }
         }
+
         @media screen and (max-width: 1165px) {
             #tag-container {
                 width: 100%;
             }
+
             #project-container {
                 padding-top: 3%;
             }
 
-            .container-style{
+            .container-style {
                 width: 100%;
             }
 
             #PAGE-HEIGHT {
-            height: 320vh;
+                height: 350vh;
+            }
+
         }
-    
-        }
+
         @media screen and (max-width: 765px) {
             #project-container {
                 margin-top: 25%;
             }
+
             #PAGE-HEIGHT {
-            margin-bottom: 40%;
-        }
+                margin-bottom: 40%;
+            }
         }
     </style>
 </head>
@@ -248,20 +253,32 @@
         <!-- ====================================================== -->
         <div id="project-container">
             <!-- =============project 1 ================== -->
-            <div data-tags="campaign,university" data-age="5" class="container-style" id="retrippin">
+            <div data-tags="campaign,university" data-age="6" class="container-style" id="retrippin">
                 <div class="tag-text">
                     <p>Campaign</p>
                 </div>
                 <div id="title-text">
-                    <h1 id="mid-text">RETRIPPIN</h1>
+                    <h1 class="mid-text">RETRIPPIN</h1>
                     <video class="hover-video" playsinline autoplay muted loop>
                         <source src="vid/retrippin.mp4" type="video/mp4">
-                      </video>
+                    </video>
                 </div>
             </div>
-
             <!-- =============project 2 ================== -->
-            <div data-tags="visual-identity,university" data-age="6" class="container-style" id="museum">
+            <div data-tags="creative-coding,campaign,university" data-age="1" class="container-style" id="report">
+                <div class="tag-text">
+                    <p>Interactive, Campaign</p>
+                </div>
+                <div id="title-text">
+                    <h1 class="top-text">OPERATION</h1>
+                    <h1 class="bot-text">OZONE</h1>
+                    <video class="hover-video" playsinline autoplay muted loop>
+                        <source src="vid/coming_soon.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <!-- =============project 3 ================== -->
+            <div data-tags="visual-identity,university" data-age="7" class="container-style" id="museum">
                 <div class="tag-text">
                     <p>Visual identity</p>
                 </div>
@@ -270,50 +287,25 @@
                     <h1 class="bot-text">OF PAPER</h1>
                     <video class="hover-video" playsinline autoplay muted loop>
                         <source src="vid/museum.mp4" type="video/mp4">
-                      </video>
+                    </video>
                 </div>
             </div>
-            <!-- =============project 3 ================== -->
-            <div data-tags="visual-identity,campaign,university" data-age="4" class="container-style" id="report">
-                <div class="tag-text">
-                    <p>Visual identity, Campaign</p>
-                </div>
-                <div id="title-text">
-                    <h1 class="top-text">REPORT&</h1>
-                    <h1 class="bot-text">SUPPORT</h1>
-                    <video class="hover-video" playsinline autoplay muted loop >
-                        <source src="vid/report.mp4" type="video/mp4">
-                      </video>
-                </div>
-            </div>
+
             <!-- =============project 4 ================== -->
-            <div data-tags="visual-identity,client-work" data-age="1" class="container-style" id="dtc">
+            <div data-tags="visual-identity,client-work" data-age="2" class="container-style" id="parklane">
                 <div class="tag-text">
                     <p>Visual identity</p>
                 </div>
                 <div id="title-text">
-                    <h1 class="top-text">DEDHAM</h1>
-                    <h1 class="bot-text">TENNIS CLUB</h1>
+                    <h1 class="mid-text">PARKLANE</h1>
                     <video class="hover-video" playsinline autoplay muted loop>
-                        <source src="vid/coming_soon.mp4" type="video/mp4">
-                      </video>
+                        <source src="vid/PRKLN.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
+
             <!-- =============project 5 ================== -->
-            <div data-tags="creative-coding" data-age="3" class="container-style" id="responsive">
-                <div class="tag-text">
-                    <p>Web design</p>
-                </div>
-                <div id="title-text">
-                    <h1 class="top-text">RESPONSIVE</h1>
-                    <h1 class="bot-text">GALLERY</h1>
-                    <video class="hover-video" playsinline autoplay muted loop>
-                        <source src="vid/Gallery.mp4" type="video/mp4">
-                      </video>
-                </div>
-            </div>
-            <!-- =============project 5 ================== -->
-            <div data-tags="creative-coding" data-age="2" class="container-style" id="digital">
+            <div data-tags="creative-coding" data-age="4" class="container-style" id="digital">
                 <div class="tag-text">
                     <p>Storytelling, Interactive</p>
                 </div>
@@ -322,21 +314,35 @@
                     <h1 class="bot-text">NARRATIVE</h1>
                     <video class="hover-video" playsinline autoplay muted loop>
                         <source src="vid/DN.mp4" type="video/mp4">
-                      </video>
+                    </video>
                 </div>
             </div>
-            <!-- <div data-tags="" data-age="0" class="container-style">
+            <!-- =============project 6 ================== -->
+            <div data-tags="creative-coding,client-work,university" data-age="3"  class="container-style" id="SADAAC">
                 <div class="tag-text">
-                    <p>...</p>
+                    <p>AR, Interactive</p>
                 </div>
                 <div id="title-text">
-                    <h1 class="top-text">COMING</h1>
-                    <h1 class="bot-text">SOON</h1>
+                    <h1 class="top-text">SOUTH ASIA</h1>
+                    <h1 class="bot-text">COLLECTIVE</h1>
                     <video class="hover-video" playsinline autoplay muted loop>
-                        <source src="vid/DN.mp4" type="video/mp4">
-                      </video>
+                        <source src="vid/coming_soon.mp4" type="video/mp4">
+                    </video>
                 </div>
-            </div> -->
+            </div>
+            <!-- =============project 7 ================== -->
+            <div data-tags="creative-coding" data-age="5" class="container-style" id="responsive">
+                <div class="tag-text">
+                    <p>Web design</p>
+                </div>
+                <div id="title-text">
+                    <h1 class="top-text">RESPONSIVE</h1>
+                    <h1 class="bot-text">GALLERY</h1>
+                    <video class="hover-video" playsinline autoplay muted loop>
+                        <source src="vid/Gallery.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -347,7 +353,8 @@
             <p id="remove-at-vp">Website designed and coded from scratch</p>
         </div>
         <div class="details-text">
-            <a href="https://www.instagram.com/jtdesignpage?igsh=d2ozN2kxaDZtNzF0&utm_source=qr" target="_blank">Instagram</a>
+            <a href="https://www.instagram.com/jtdesignpage?igsh=d2ozN2kxaDZtNzF0&utm_source=qr"
+                target="_blank">Instagram</a>
             <p id="seperator">|</p>
             <a href="mailto:joetaylorgd25@gmail.com" target="_blank">joetaylorgd25@gmail.com</a>
         </div>

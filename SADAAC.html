@@ -10,75 +10,53 @@
     <link rel="stylesheet" href="https://use.typekit.net/itb5qzi.css">
     <link rel="icon" type="image/x-icon" href="/img//favicon/favicon4.png">
     <script src="script.js" defer></script>
-    <!-- <script src="header.js" defer></script> -->
     <style>
         #gallery {
             width: 96%;
             margin: 2%;
             display: flex;
             flex-direction: column;
-            justify-content: right;
-            align-items: center;
+
+
         }
-        #iframe-container{
-            display: flex;
-            flex-direction: column;
-            justify-content: right;
-            align-items:flex-end;
-        }
-        #text-holder{
-            display: flex;
-            flex-direction: row;
-            justify-content: end;
-            width: 100%;
-        }
-        iframe {
-            resize: both;
-            direction: ltr;
-            width: 1400px;
-            height: 700px;
-            overflow: auto;
-            border: white 1px solid;
-            min-width: 400px;
-            /* Minimum width */
-            min-height: 450px;
+
+        video {
+            padding: 0%;
         }
 
         #next-project {
             margin: 2%;
         }
 
-        #tag-text {
-            margin-top: 1%;
-            margin-left: 1%;
-        }
-        #resize-arrow{
-                   rotate: 180deg;
-        }
-        img{
-            width: 25px;
-     
-            margin-left: 1%;
+        iframe {
+            width: 80%;
+            height: 100%;
         }
 
-        @media screen and (max-width: 900px) {
+        .containerstyle2 {
+            height: 97vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .containerstyle3 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+
+        }
+
+        #video {
+            width: 100%;
+            border: white 1px solid;
+        }
+        @media screen and  (max-width: 900px) {
             iframe {
-                width: 500px;
-                height: 700px;
-            }
-
-            #tag-text {
-                padding-block: 1%;
-            }
-        }
-
-        @media screen and (max-width: 700px) {
-            iframe {
-                width: 300px;
-            }
-
+            width: 99%}
             #tag-text{
-                padding-right: 5%;
+                padding-block: 1%;
             }
         }
     </style>
@@ -104,36 +82,37 @@
     <div id="content-area">
         <div id="project-title">
             <a href="projects.html"><img class="arrow" id="back-arrow" src="img/arrow.svg" alt=""></a>
-            <h1>RESPONSIVE GALLERY</h1>
+            <h1>SOUTH ASIA COLLECTIVE</h1>
         </div>
         <div id="project-description">
             <div class="paragraph">
                 <p>
-                    For one of my initial creative coding projects, I looked into the importance of designing for
-                    diverse devices. It was my first web building project and it was centred around ethereal photo
-                    themes, the site showcases a few of my personal photos. This project sparked my consideration for
-                    user interactivity, prompting me to explore the dynamic relationship between design and user
-                    experience.</p>
+                    This was my second project set for creative coding and was all about storytelling, Its primary
+                    objective was to shed light on the often-overlooked issues of isolation and loneliness. The
+                    narrative unfolds through the portrayal of an individual grappling with isolation in a challenging
+                    environment, capturing the emotional and cognitive struggles experienced by those facing this
+                    reality. The storytelling is purposefully limited,
+                    deeply about its</p>
+            </div>
+            <div class="paragraph">
+                <p> allowing people who are playing to not only think meaning but also to immerse themselves in the open-ended nature of the experience.
+                    Each conclusion introduces its effects, intentionally leaving players in a state of contemplation
+                    and confusion, mirroring the impact of isolation. This project helped me develop my javascript
+                    skills which were essential for user interactivity and experience.
+                </p>
             </div>
         </div>
         <div id="gallery">
-            <div id="iframe-container">
-                <iframe src="Responsive_gallery/index.html" frameborder="0"></iframe>
-                <div id="text-holder">
-                <p id="tag-text">Try and resize me!</p>
-                <img id="resize-arrow" src="img/arrow.svg" alt="">
-            </div>
-            </div>
         </div>
     </div>
     <div id="next-project">
         <p>Next project</p>
-        <a href="retrippin.html">
-            <h1>RETRIPPIN</h1>
+        <a href="digitalnarrative.html">
+            <h1>DIGITAL NARRATIVE</h1>
         </a>
         <div id="arrow-container">
-            <a href="retrippin.html"><img class="arrow" src="img/arrow.svg"></a>
-            <p id="image-seperator">Campaign</p>
+            <a href="digitalnarrative.html"><img class="arrow" src="img/arrow.svg"></a>
+            <p id="image-seperator">Storytelling, Interactive</p>
         </div>
     </div>
 
