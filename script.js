@@ -301,60 +301,30 @@ if (window.location.pathname === '/projects.html') {
 
 }
 // ===================================================================
-if (window.location.pathname === '/museum.html' || window.location.pathname === '/retrippin.html' || window.location.pathname === '/reportandsupport.html') {
+if (['/museum.html', '/retrippin.html', '/operationOzone.html'].includes(window.location.pathname)) {
     let slides = Array.from(document.getElementsByClassName("img-slideshow"));
     let slides2 = Array.from(document.getElementsByClassName("img-slideshow2"));
-
     let videoElement = document.querySelector('video');
-    if (window.innerWidth <= 700) {
-        videoElement.controls = true;
-        videoElement.autoplay = false;
-    } else {
-        videoElement.controls = false;
-        videoElement.autoplay = true;
-    }
+
+    videoElement.controls = window.innerWidth <= 700;
+    videoElement.autoplay = window.innerWidth > 700;
 
     let currentSlideIndex = 0;
     let currentSlideIndex2 = 0;
 
+    const showSlide = (slides, index, direction) => {
+        slides[index].style.display = "none";
+        index = (index + direction + slides.length) % slides.length;
+        slides[index].style.display = "block";
+        return index;
+    };
 
-
-    document.getElementById('previous-half').addEventListener('touchstart', showPreviousSlide2);
-    document.getElementById('previous-half').addEventListener('click', showPreviousSlide2);
-    document.getElementById('next-half').addEventListener('click', showNextSlide);
-    document.getElementById('next-half').addEventListener('touchstart', showNextSlide)
-
-    document.getElementById('next-half2').addEventListener('click', showNextSlide2);
-    document.getElementById('next-half2').addEventListener('touchstart', showNextSlide2);
-    document.getElementById('previous-half2').addEventListener('click', showPreviousSlide2);
-    document.getElementById('previous-half2').addEventListener('touchstart', showPreviousSlide2)
-
-
-
-    function showNextSlide() {
-        slides[currentSlideIndex].style.display = "none";
-        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-        slides[currentSlideIndex].style.display = "block";
-    }
-
-    function showPreviousSlide() {
-        slides[currentSlideIndex].style.display = "none";
-        currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
-        slides[currentSlideIndex].style.display = "block";
-    }
-
-    function showNextSlide2() {
-        slides2[currentSlideIndex2].style.display = "none";
-        currentSlideIndex2 = (currentSlideIndex2 + 1) % slides2.length;
-        slides2[currentSlideIndex2].style.display = "block";
-    }
-
-    function showPreviousSlide2() {
-        slides2[currentSlideIndex2].style.display = "none";
-        currentSlideIndex2 = (currentSlideIndex2 - 1 + slides2.length) % slides2.length;
-        slides2[currentSlideIndex2].style.display = "block";
-    }
+    document.getElementById('previous-half').addEventListener('click', () => currentSlideIndex = showSlide(slides, currentSlideIndex, -1));
+    document.getElementById('next-half').addEventListener('click', () => currentSlideIndex = showSlide(slides, currentSlideIndex, 1));
+    document.getElementById('previous-half2').addEventListener('click', () => currentSlideIndex2 = showSlide(slides2, currentSlideIndex2, -1));
+    document.getElementById('next-half2').addEventListener('click', () => currentSlideIndex2 = showSlide(slides2, currentSlideIndex2, 1));
 }
+
 // ===================================================================
 if (window.location.pathname === '/digitalnarrative.html') {
 

@@ -10,18 +10,78 @@
     <link rel="stylesheet" href="https://use.typekit.net/itb5qzi.css">
     <link rel="icon" type="image/x-icon" href="/img//favicon/favicon4.png">
     <script src="script.js" defer></script>
-    <!-- <script src="header.js" defer></script> -->
+
     <style>
-       
+             #gallery {
+            width: 96%;
+            margin: 2%;
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+        }
+        #link-holder{
+    width: 100%;
+    padding-right: 1%;
+    text-align: right;
+}
+#link{
+    text-decoration: underline;
+}
+        #vid1 {
+            width: 35%;
+            object-fit: cover;
+        }
 
-      
+        #vid2 {
+            width: 65%;
+            object-fit: cover;
+        }
 
-        @media screen and  (max-width: 900px) {
-            .images{
-        width: 99%;
-        padding: 0.5%;
-    }
-   
+        .ozone-images{
+            width: 31%;
+            object-fit: cover;
+            margin-inline: 1%;
+            
+        }
+        #ozone-link{
+            margin-bottom: 2%;
+        }
+
+        #previous-half {
+            position: absolute;
+            top: 0;
+            width: 50%;
+            height: 100%;
+
+        }
+
+        #next-half {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+
+
+
+        }
+
+        .img-slideshow {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width: 900px) {
+            #vid1,#vid2 {
+                width: 99%;
+                padding: 0.5%;
+            }
+            .ozone-images{
+                width: 99%;
+                height: 700px;
+                padding: 0.5%;
+            }
         }
     </style>
 </head>
@@ -46,56 +106,78 @@
     <div id="content-area">
         <div id="project-title">
             <a href="projects.html"><img class="arrow" id="back-arrow" src="img/arrow.svg" alt=""></a>
-            <h1>OPPERATION OZONE</h1>
+            <h1>OPERATION OZONE</h1>
         </div>
         <div id="project-description">
             <div class="paragraph">
                 <p> Brief: <br>
-                    Find a poem and use emerging font technology and typography to reinforce its meaning, focusing on an ecological or environmental message.
+                    Find a poem and use emerging font technology and typography to reinforce its meaning, focusing on an
+                    ecological or environmental message.
                 </p>
             </div>
             <div class="paragraph">
                 <p>
                     Insight: <br>
-                    Local lockdowns during COVID-19 unexpectedly led to a rapid recovery of the ozone layer, highlighting the potential impact of hidden individual actions on the environment.</p>
+                    Local lockdowns during COVID-19 unexpectedly led to a rapid recovery of the ozone layer,
+                    highlighting the potential impact of hidden individual actions on the environment.</p>
             </div>
             <div class="paragraph">
                 <p> response: <br>
-                    Inspired by the poem: ‘Letter to corona’,  learn from the lockdown and remind people that we can make a change. Visualing the invisible ozone layer, with the variable font, SixtyFour.
+                    Inspired by the poem: ‘Letter to corona’, learn from the lockdown and remind people that we can make
+                    a change. Visualing the invisible ozone layer, with the variable font, SixtyFour.
 
                 </p>
             </div>
         </div>
-
+        <!-- ====================== gallery =================== -->
+        <div id="gallery">
+            <div id="link-holder"><a id='link' href="ozone/index2.html">Try out the Interactive Website</a></div>
+            <div class="containerstyle1">
+                <video id="vid1" src="vid/ozone/ozone.mp4" loop autoplay muted></video>
+                <video id="vid2" src="vid/ozone/sixtyFour.mov" loop autoplay muted></video>
+            </div>
+            <div class="containerstyle1">
+                <div id="slideshow-container">
+                    <img class="img-slideshow" src="img/ozone/LA SPHERE_00297.png">
+                    <img class="img-slideshow" src="img/ozone/AC mockup.png" style="display:none;">
+                    <img class="img-slideshow" src="img/ozone/tube_mockup.png" style="display:none;">
+                    <div id="previous-half"></div>
+                    <div id="next-half"></div>
+                </div>
+            </div>
+            <div class="containerstyle3">
+                <img class="ozone-images" src="img/ozone/Screenshot 2024-03-19 at 23.36.32.jpg">
+                <img class="ozone-images" src="img/ozone/IMG_3440.jpg">
+                <img class="ozone-images" src="img/ozone/poem_mockup.png">
+            </div>
+        </div>
     </div>
+    <div id="next-project">
+        <p>Next project</p>
+        <a href="parklane.html">
+            <h1>PARK LANE</h1>
+        </a>
+        <div id="arrow-container">
+            <a href="parklane.html"><img class="arrow" src="img/arrow.svg"></a>
+            <p id="image-seperator">Visual identity</p>
         </div>
-        <div id="next-project">
-            <p>Next project</p>
-            <a href="parklane.html">
-                <h1>PARK LANE</h1>
-            </a>
-            <div id="arrow-container">
-                <a href="parklane.html"><img class="arrow" src="img/arrow.svg"></a>
-                <p id="image-seperator">Visual identity</p>
-            </div>
-        </div>
+    </div>
 
-        <!-- ================================================= -->
-        <!-- ================== footer ================== -->
-        <div id="footer-line"></div>
-        <div id="footer">
-            <div class="details-text">
-                <p id="remove-at-vp">Website designed and coded from scratch</p>
-            </div>
-            <div class="details-text">
-                <a href="https://www.instagram.com/jtdesignpage?igsh=d2ozN2kxaDZtNzF0&utm_source=qr"
-                    target="_blank">Instagram</a>
-                <p id="seperator">|</p>
-                <a class="details-text" href="mailto:joetaylorgd25@gmail.com"
-                    target="_blank">joetaylorgd25@gmail.com</a>
-            </div>
+    <!-- ================================================= -->
+    <!-- ================== footer ================== -->
+    <div id="footer-line"></div>
+    <div id="footer">
+        <div class="details-text">
+            <p id="remove-at-vp">Website designed and coded from scratch</p>
         </div>
-        <!-- ================================================= -->
+        <div class="details-text">
+            <a href="https://www.instagram.com/jtdesignpage?igsh=d2ozN2kxaDZtNzF0&utm_source=qr"
+                target="_blank">Instagram</a>
+            <p id="seperator">|</p>
+            <a class="details-text" href="mailto:joetaylorgd25@gmail.com" target="_blank">joetaylorgd25@gmail.com</a>
+        </div>
+    </div>
+    <!-- ================================================= -->
 </body>
 
 </html>
