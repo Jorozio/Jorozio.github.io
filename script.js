@@ -85,7 +85,7 @@ let observer = new IntersectionObserver((entries) => {
      }
     });
    }, {
-    threshold: 0.1
+    threshold: 0.01
    });
 
    let observer2 = new IntersectionObserver((entries) => {
@@ -142,7 +142,8 @@ if (window.location.pathname === '/projects.html') {
     let report = document.getElementById("report")
     let responsive = document.getElementById("responsive")
     let digital = document.getElementById("digital")
-    let dtc = document.getElementById("dtc")
+    let parklane = document.getElementById("parklane")
+    let SADAAC = document.getElementById("SADAAC")
 
     retrippin.addEventListener('click', () => {
         window.location.href = "retrippin.html";
@@ -153,7 +154,7 @@ if (window.location.pathname === '/projects.html') {
     })
 
     report.addEventListener('click', () => {
-        window.location.href = "reportandsupport.html";
+        window.location.href = "operationOzone.html";
     })
 
     responsive.addEventListener('click', () => {
@@ -164,8 +165,12 @@ if (window.location.pathname === '/projects.html') {
         window.location.href = "digitalnarrative.html";
     })
 
-    dtc.addEventListener('click', () => {
-        window.location.href = "DTC.html";
+    parklane.addEventListener('click', () => {
+        window.location.href = "parklane.html";
+    })
+
+    SADAAC.addEventListener('click', () => {
+        window.location.href = "SADAAC.html";
     })
 
 
@@ -296,64 +301,32 @@ if (window.location.pathname === '/projects.html') {
 
 }
 // ===================================================================
-if (window.location.pathname === '/museum.html' || window.location.pathname === '/retrippin.html' || window.location.pathname === '/reportandsupport.html') {
+if (['/museum.html', '/retrippin.html', '/operationOzone.html'].includes(window.location.pathname)) {
     let slides = Array.from(document.getElementsByClassName("img-slideshow"));
     let slides2 = Array.from(document.getElementsByClassName("img-slideshow2"));
-
     let videoElement = document.querySelector('video');
-    if (window.innerWidth <= 700) {
-        videoElement.controls = true;
-        videoElement.autoplay = false;
-    } else {
-        videoElement.controls = false;
-        videoElement.autoplay = true;
-    }
+
+    videoElement.controls = window.innerWidth <= 700;
+    videoElement.autoplay = window.innerWidth > 700;
 
     let currentSlideIndex = 0;
     let currentSlideIndex2 = 0;
 
+    const showSlide = (slides, index, direction) => {
+        slides[index].style.display = "none";
+        index = (index + direction + slides.length) % slides.length;
+        slides[index].style.display = "block";
+        return index;
+    };
 
-
-    document.getElementById('previous-half').addEventListener('touchstart', showPreviousSlide2);
-    document.getElementById('previous-half').addEventListener('click', showPreviousSlide2);
-    document.getElementById('next-half').addEventListener('click', showNextSlide);
-    document.getElementById('next-half').addEventListener('touchstart', showNextSlide)
-
-    document.getElementById('next-half2').addEventListener('click', showNextSlide2);
-    document.getElementById('next-half2').addEventListener('touchstart', showNextSlide2);
-    document.getElementById('previous-half2').addEventListener('click', showPreviousSlide2);
-    document.getElementById('previous-half2').addEventListener('touchstart', showPreviousSlide2)
-
-
-
-    function showNextSlide() {
-        slides[currentSlideIndex].style.display = "none";
-        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-        slides[currentSlideIndex].style.display = "block";
-    }
-
-    function showPreviousSlide() {
-        slides[currentSlideIndex].style.display = "none";
-        currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
-        slides[currentSlideIndex].style.display = "block";
-    }
-
-    function showNextSlide2() {
-        slides2[currentSlideIndex2].style.display = "none";
-        currentSlideIndex2 = (currentSlideIndex2 + 1) % slides2.length;
-        slides2[currentSlideIndex2].style.display = "block";
-    }
-
-    function showPreviousSlide2() {
-        slides2[currentSlideIndex2].style.display = "none";
-        currentSlideIndex2 = (currentSlideIndex2 - 1 + slides2.length) % slides2.length;
-        slides2[currentSlideIndex2].style.display = "block";
-    }
+    document.getElementById('previous-half').addEventListener('click', () => currentSlideIndex = showSlide(slides, currentSlideIndex, -1));
+    document.getElementById('next-half').addEventListener('click', () => currentSlideIndex = showSlide(slides, currentSlideIndex, 1));
+    document.getElementById('previous-half2').addEventListener('click', () => currentSlideIndex2 = showSlide(slides2, currentSlideIndex2, -1));
+    document.getElementById('next-half2').addEventListener('click', () => currentSlideIndex2 = showSlide(slides2, currentSlideIndex2, 1));
 }
+
 // ===================================================================
 if (window.location.pathname === '/digitalnarrative.html') {
-    let video = document.querySelector("#video");
-    let container = document.querySelector(".containerstyle3");
 
 
     let pElement = document.getElementById('tag-text');
@@ -363,15 +336,10 @@ if (window.location.pathname === '/digitalnarrative.html') {
         pElement.innerHTML = "Move mouse left to right to look through code.";
     }
 
-    container.addEventListener('mousemove', function (event) {
-        let rect = this.getBoundingClientRect();
-        let x = event.clientX - rect.left; // x position within the element.
-        video.currentTime = x / rect.width * video.duration;
-    });
 
 }
 
-if (window.location.pathname === '/DTC.html') {
+if (window.location.pathname === '/SADAAC.html') {
     let i = 0; // Initial index
     let str = "..."; // String to be typed
     let el = document.getElementById('dotdotdot'); // Element to display the string
