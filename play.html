@@ -40,7 +40,7 @@
 
         #video-space {
             z-index: -1;
-            width: 20%;
+            width: 19%;
             display: flex;
         }
 
@@ -96,14 +96,14 @@
 
 
         #text-container {
-            width: 650px;
+            width: 620px;
             height: 500px;
             display: flex;
             flex-wrap: wrap;
             white-space: normal;
             margin: 0.6%;
             margin-top: 0.1%;
-            margin-left: 10%;
+            margin-left: 7%;
         }
 
         #text-container2 {
@@ -164,16 +164,10 @@
 
         }
 
-        #marching,
-        #image-pixelator {
+        #marching{
             padding: 0.2%;
             opacity: 100;
             z-index: -1;
-        }
-
-        #image-pixelator {
-            width: 1090px;
-            margin-left: 18%
         }
 
 
@@ -181,8 +175,11 @@
             padding: 0.2%;
             margin-left: 13.5%;
         }
+        #atom-vid{
+            padding: 0.2%;
+        }
 
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1300px) {
 
             #content-area {
                 display: none;
@@ -209,6 +206,14 @@
             }
 
         }
+
+        @media (max-width: 1500px) {
+            #text-container {
+           
+            margin-left: 10%;
+        }
+}
+
     </style>
 </head>
 
@@ -242,24 +247,16 @@
             <img id="keep-going2" src="img/arrow2.svg" alt="">
         </div>
         <div id="text-container">
-            <h4>For me, learning to have fun through play provides so much inspiration for tackling real world
-                issues
-                and problems. The world is so serious and for good reason, but it’s nice to have a break from that
-                to focus on growing skills and then coming back to see how these skills can apply and help solve
-                these issues.</h4>
+            <h4 id="text">For me, learning to have fun in play sparks creativity for addressing real-world problems; it's about honing our ability to think outside the box and approach challenges with fresh perspectives. Taking the time to cultivate these skills not only offers refreshing perspectives but also allows us to learn and grow in unexpected ways.</h4>
 
         </div>
-        <video class="video-p5js" id="position1" src="vid/p5js1.mov" autoplay loop muted></video>
+        <video class="video-p5js" id="position1" src="vid/p5js3.mov" autoplay loop muted></video>
         <video class="video-p5js" id="position4" src="vid/p5js2.mov" autoplay loop muted></video>
         <video class="video-p5js" id="position5" src="vid/p5js2.5.mov" autoplay loop muted></video>
         <video id="marching" src="vid/marchingsquares.mov" autoplay loop muted></video>
         <img id="keep-going3" src="img/arrow2.svg" alt="">
         <video id="cursor-squares" src="vid/cursorsquare.mov" autoplay loop muted></video>
-        <video id="position2" src="vid/p5js3.mov" autoplay loop muted></video>
-        <!-- <iframe id="image-pixelator" src="https://www.youtube.com/embed/chrjmc5AwuU?si=uUSRdKtOAb8ZHp8P"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe> -->
+        <video id="atom-vid" src="vid/Atom.mp4" autoplay loop muted></video>
         <div id="text-container2">
             <h4>Keep your eye out! This page is always getting updated with my latest personal projects and workshops
                 from University. If you like what you see, check out <a id="para-link" href="https://www.instagram.com/jtdesignpage?igsh=d2ozN2kxaDZtNzF0&utm_source=qr" target="_blank">my instagram</a> for more examples of stuff I couldnt fit on here!</h4>
