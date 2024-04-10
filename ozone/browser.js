@@ -14,13 +14,14 @@ function getBrowserInfo() {
     if((tem = ua.match(/version\/(\d+)/i)) != null) M.splice(1, 1, tem[1]);
     console.log(M[1])
     return M[1];
+
    
    }
    
    
    function errorMsg() {
      let browserName = getBrowserInfo();
-     if (browserName !== '122') {
+     if (browserName !== '123') {
        const errorImg = document.getElementById("error-img")
        const errorTxt = document.getElementById("error-txt")
        errorImg.style.display = 'block'

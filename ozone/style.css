@@ -10,7 +10,7 @@ height: 100%;
 
 
 canvas {
-  z-index: -1;
+  z-index: -3;
   position: absolute;
   top: -10%;
   left: 0;
@@ -113,7 +113,7 @@ p{
   position: fixed;
   width: 400px;
   right: 2%;
-  top: 18%;
+  top: 15%;
   text-align: right;
 }
 
