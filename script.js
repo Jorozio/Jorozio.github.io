@@ -340,26 +340,25 @@ if (window.location.pathname === '/digitalnarrative.html') {
 }
 
 if (window.location.pathname === '/SADAAC.html') {
-    let i = 0; // Initial index
-    let str = "..."; // String to be typed
-    let el = document.getElementById('dotdotdot'); // Element to display the string
+    let clips = document.querySelectorAll(".logo-vid")
 
-    // Function to animate the typing effect
-    function type() {
-        if (i < str.length) {
-            el.innerHTML += str.charAt(i);
-            i++;
-        }
-        else {
-            // Clear the element and reset the index
-            el.innerHTML = '';
-            i = 0;
-        }
-    }
+/* Adding the event listeners on the video to play/pause the video. */
 
-    // Call the type function every 200 milliseconds
-    setInterval(type, 800);
+function addEventListeners(clip) {
+    clip.addEventListener("mouseover", function (e) {
+        clip.play();
+    });
+
+    clip.addEventListener("mouseout", function (e) {
+        clip.pause();
+    });
 }
+    clips.forEach(addEventListeners);
+
+
+}
+
+// ================================= responsive gallery ========================
 if (window.location.pathname === '/responsivegallery.html') {
     let pElement = document.getElementById('tag-text');
     if (window.innerWidth <= 900) {
@@ -368,3 +367,26 @@ if (window.location.pathname === '/responsivegallery.html') {
         pElement.innerHTML = "Try and resize me!";
     }
 }
+
+
+// COMING SOON JS =============================================
+
+    // let i = 0; // Initial index
+    // let str = "..."; // String to be typed
+    // let el = document.getElementById('dotdotdot'); // Element to display the string
+
+    // // Function to animate the typing effect
+    // function type() {
+    //     if (i < str.length) {
+    //         el.innerHTML += str.charAt(i);
+    //         i++;
+    //     }
+    //     else {
+    //         // Clear the element and reset the index
+    //         el.innerHTML = '';
+    //         i = 0;
+    //     }
+    // }
+
+    // // Call the type function every 200 milliseconds
+    // setInterval(type, 800);
