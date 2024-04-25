@@ -6,7 +6,7 @@
 body{
     background-color: #0f0f0f;
     width: 100vw;
-    height: 98vh;
+    /* height: 98vh; */
     transition: background-color 2s;
 }
 

@@ -13,7 +13,7 @@
     <style>
         #gallery {
             width: 96%;
-            height: 200vh;
+            /* height: 200vh; */
             margin: 2%;
             padding: 2%;
             justify-content: center;
@@ -27,19 +27,24 @@
             padding: 0%;
             align-items: start;
             justify-content: space-between;
-            height: 90vh;
             width: 90vw;
             /* background-color: rgb(212, 0, 255); */
 
         }
 
         #Sadaac_img{
-            width: 68.5%;
+           height: 90vh;
+
+
         }
 
         iframe{
-            width: 30%;
-            height: 98%;
+            /* width: 30%; */
+    
+            /* height: 98%; */
+            height: 90vh;
+            width: 90%;
+            padding-right: 2%;
             /* width="445" height="820"  */
         }
 
@@ -47,7 +52,7 @@
             
             justify-content: center;
             width: 33.3%; 
-            padding-top: 20px;
+            padding-top: 30px;
             /* background-color: aqua; */
         }
 
@@ -60,6 +65,37 @@
         padding-inline: 2%;
         }
 
+        @media screen and (max-width: 900px) {
+            iframe,.logo-vid {
+                width: 100%;
+                padding: 0.5%;
+            }
+
+            #Sadaac_img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .containerstyle1{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            #gallery{
+                justify-content: center;
+            }
+        
+            
+        }
+
+        @media screen and (max-width: 1400px) {
+            #Sadaac_img{
+                height: 60vh;
+
+
+        }
+        
+        }
     
     </style>
 </head>
@@ -121,6 +157,7 @@
                 <video class="logo-vid" src="vid/SADAAC/shrine.MP4" muted loop ></video>
             </div>
         </div>
+    </div>
         <div id="next-project">
             <p>Next project</p>
             <a href="digitalnarrative.html">
