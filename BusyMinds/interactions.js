@@ -34,11 +34,11 @@ const pageToNavItem = {
 
 let startY;
 let moveY;
-let swipeThreshold = 35;
+let swipeThreshold = 200;
 
 let targetY;
 let currentY = 0;
-let moveSpeed = 35;
+let moveSpeed = 35
 
 let held = false;
 let shouldMove = false; 
@@ -111,3 +111,25 @@ function mousePressed(event) {
 }
    }
 
+   function mediaQueryCheck() {
+    // Check if the window width is less than or equal to 377
+    if (window.innerWidth <= 377) {
+       // Set the text size to 40
+       textSize(40);
+       // Display the text
+       text("THE CONSTANT", -160, -120);
+       text("HUSTLE OF LIFE", -160, -80);
+       text("CAN WEAR YOU", -160, -40);
+       text("DOWN IN WAYS", -160, 0);
+       text("THAT’S HARD", -160, 40);
+       text("TO SEE", -160, 80);
+    } else {
+      textSize(45);
+      text("THE CONSTANT", -170, -130)
+      text("HUSTLE OF LIFE", -170, -90)
+      text("CAN WEAR YOU", -170, -50)
+      text("DOWN IN WAYS", -170, -10)
+      text("THAT’S HARD", -170, 30)
+      text("TO SEE", -170, 70)
+    }
+   }
