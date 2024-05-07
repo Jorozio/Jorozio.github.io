@@ -28,7 +28,7 @@ function preload() {
 function setup() {
   c = createCanvas(windowWidth, windowHeight, WEBGL);
   // set the starting position for the canvas
-
+  c.style('user-select', 'none');
   c.position(0, currentY)
 
   textAlign(LEFT, CENTER);
