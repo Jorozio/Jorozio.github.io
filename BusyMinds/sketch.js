@@ -4,7 +4,7 @@ let balls = [];
 let c
 
 // setting the starting values for the radii and velocity
-let baseRadius = 900;
+let baseRadius;
 let baseVelocity = 17;
 
 // declaring a new variable to change the radius and speed
@@ -32,6 +32,12 @@ function setup() {
   c.position(0, currentY)
 
   textAlign(LEFT, CENTER);
+
+  if (windowWidth < 390) {
+    baseRadius = 550; // Set base radius to 500 if the viewport width is below 400
+ } else {
+    baseRadius = 750; // Otherwise, set base radius to 700
+ }
 
   metaballShader = createShader(
     //  ========== green shader ==========
@@ -125,11 +131,9 @@ function draw() {
       button.style.backgroundImage = "url('img/busymindsblack.png')"; // Change the background image
     });
 
-
     const InfoContainer = document.getElementById('introduction-container')
 
     InfoContainer.style.display = 'block'
-
   }
 
   if (held) {
@@ -157,19 +161,11 @@ function draw() {
       ball.speed = newSpeed;
     });
 
-  }
-
-// ===================================== everything below is annotated inside of digital poster ======================================
-  textSize(45);
+  }  
   textFont(myfont);
   fill(0, 255, 145);
-  text("THE CONSTANT", -170, -130)
-  text("HUSTLE OF LIFE", -170, -90)
-  text("CAN WEAR YOU", -170, -50)
-  text("DOWN IN WAYS", -170, -10)
-  text("THAT’S HARD", -170, 30)
-  text("TO SEE", -170, 70)
-
+  mediaQueryCheck()
+// ===================================== everything below is annotated inside of digital poster ======================================
 
   metaballShader.setUniform('xs', balls.map(b => b.pos.x));
   metaballShader.setUniform('ys', balls.map(b => b.pos.y));
@@ -183,6 +179,7 @@ function draw() {
   }
 
 }
+
 
 class Ball {
   constructor(x, y) {

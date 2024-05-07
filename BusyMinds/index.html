@@ -16,6 +16,13 @@
 
   <style>
     #downwards-arrow {
+      position: fixed;
+      /* Fixes the position relative to the viewport */
+      bottom: 30px;
+      /* Positions the element at the bottom of the viewport */
+      left: 50%;
+      /* Positions the element halfway across the viewport */
+      transform: translateX(-50%);
       width: 2.2rem;
     }
 
@@ -23,21 +30,38 @@
       height: 82%;
       align-items: center;
       justify-content: end;
- 
+
 
     }
-    #introduction-container{
-    z-index: -1;
-    padding-bottom: 10%;
-    display: none;
-  }
-  .title{
-    margin-left: 1%;
-    padding-bottom: 0;
 
-  }
-  html, body {
-        user-select: none;
+    #introduction-container {
+      z-index: -1;
+      padding-bottom: 10%;
+      display: none;
+    }
+
+    @media screen and (max-height: 685px) {
+
+      #introduction-container {
+        padding: 0;
+        margin: 0;
+
+      }
+
+      p {
+        font-size: 1.01rem;
+      }
+    }
+
+    .title {
+      margin-left: 1%;
+      padding-bottom: 0;
+
+    }
+
+    html,
+    body {
+      user-select: none;
     }
   </style>
 </head>

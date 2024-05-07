@@ -29,7 +29,7 @@ canvas {
   height: 50px;
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
+  padding-top: 80px;
 
 }
 
@@ -100,7 +100,9 @@ p{
  }
 
  .para-container, .title {
-  user-select: none;
-  -webkit-user-select: none; /* For Safari */
-  -moz-user-select: none; /* For Firefox */
- }
+ user-select: none;
+ -webkit-user-select: none; /* For Safari */
+ -moz-user-select: none; /* For Firefox */
+ -ms-user-select: none; /* For Internet Explorer */
+}
+
