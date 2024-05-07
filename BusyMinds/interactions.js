@@ -34,7 +34,7 @@ const pageToNavItem = {
 
 let startY;
 let moveY;
-let swipeThreshold = 35;
+let swipeThreshold = 70;
 
 let targetY;
 let currentY = 0;
