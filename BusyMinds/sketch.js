@@ -125,6 +125,11 @@ function draw() {
       button.style.backgroundImage = "url('img/busymindsblack.png')"; // Change the background image
     });
 
+
+    const InfoContainer = document.getElementById('introduction-container')
+
+    InfoContainer.style.display = 'block'
+
   }
 
   if (held) {
