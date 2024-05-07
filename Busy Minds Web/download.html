@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="interactions.js" defer></script>
+
+
+    <style>
+        .header-link-style {
+            color: black;
+        }
+
+        .image-button {
+            background-image: url('img/busymindsblack.png');
+        }
+
+
+        #chrome-video {
+            height: 200px;
+            
+            margin-inline: 9%;
+        }
+#para-container{
+    margin-bottom: 230px;
+}
+#chrome-icon-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-inline: 9%;
+}
+#icon{
+    width: 75%;
+
+}
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <button class="image-button"></button>
+        <div id="link-container">
+            <a class="header-link-style" id="shop-link" href="shop.html">Shop</a>
+            <a class="header-link-style" id="info-link" href="info.html">Info</a>
+            <a class="header-link-style" id="download-link"href="download.html">Download</a>
+        </div>
+
+    </div>
+    <div id="main-container">
+        <div id="title-holder">
+            <img class="title" src="img/titles/extension.png" alt="">
+        </div>
+        <iframe id="chrome-video" src="https://www.youtube.com/embed/32dv3rMRJ3I?si=8lPHVqUgJliSbIrE"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div id="para-container">
+                <p>A minimal tool to serve as a random reminder to take a moment from your day to breathe and be mindful, helping to mitigate stress, mind-fog and being overwhelmed.</p>
+            </div>
+            <div id="chrome-icon-container">
+                <img id="icon" src="img/titles/chromeapp.png" alt="">
+            </div>
+           
+    </div>
+</body>
+
+</html>
