@@ -80,36 +80,36 @@ function mousePressed(event) {
 
 
   
-  function touchStarted() {
-    held = true;
+//   function touchStarted() {
+//     held = true;
 
-    if (touches.length > 0) {
-        // Record the initial touch position
-        startY = touches[0].y;
-      }
-  }
+//     if (touches.length > 0) {
+//         // Record the initial touch position
+//         startY = touches[0].y;
+//       }
+//   }
   
-  function touchEnded() {
-    held = false;
+//   function touchEnded() {
+//     held = false;
 
-   }
+//    }
 
 
-   function touchMoved() {
-    // Record the current touch position
+//    function touchMoved() {
+//     // Record the current touch position
    
-    moveY = touches[0].y;
+//     moveY = touches[0].y;
    
-    // Calculate the distance moved since the touch started
-    let distanceMoved = startY - moveY;
+//     // Calculate the distance moved since the touch started
+//     let distanceMoved = startY - moveY;
    
-    // Check if the distance moved is greater than the swipe threshold
-    if (distanceMoved > swipeThreshold) {
-        targetY = -c.height;
-        shouldMove = true;
+//     // Check if the distance moved is greater than the swipe threshold
+//     if (distanceMoved > swipeThreshold) {
+//         targetY = -c.height;
+//         shouldMove = true;
     
-}
-   }
+// }
+//    }
 
    function mediaQueryCheck() {
     // Check if the window width is less than or equal to 377
