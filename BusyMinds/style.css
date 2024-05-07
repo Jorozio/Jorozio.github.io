@@ -98,3 +98,9 @@ p{
 .active-nav-item {
   color: #30ce8d !important
  }
+
+ .para-container, .title {
+  user-select: none;
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+ }
