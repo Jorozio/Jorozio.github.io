@@ -56,9 +56,7 @@ function mousePressed(event) {
 
   }
   
-  function mouseReleased() {
-    held = false;
-  }
+
 
   function mouseDragged() {
 
