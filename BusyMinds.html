@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="https://use.typekit.net/itb5qzi.css">
+    <link rel="icon" type="image/x-icon" href="/img//favicon/favicon4.png">
+    <script src="script.js" defer></script>
+    <style>
+        #gallery {
+            width: 96%;
+            margin: 2%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .containerstyle1 {
+            margin: 0%;
+            padding: 0%;
+            align-items: start;
+            justify-content: center;
+            width: 90vw;
+
+
+        }
+
+        .img-slideshow {
+            height: 80vh;
+            width: 100%;
+            object-fit: cover;
+
+
+
+        }
+
+
+
+        #previous-half {
+            position: absolute;
+            top: 0;
+            width: 48%;
+            height: 100%;
+
+
+        }
+
+        #next-half {
+            position: absolute;
+            top: 0;
+            right: 0%;
+            width: 52%;
+            height: 100%;
+        }
+
+        iframe {
+            height: 80vh;
+            width: 40%;
+            padding-right: 2%;
+        }
+
+        .video {
+            width: 51%;
+            /* padding: 2%; */
+        }
+
+        #video2 {
+            width: 80%;
+            /* padding: 2%; */
+        }
+        @media screen and  (max-width: 900px) {
+  .video{
+    width: 100%;
+  }
+  iframe{
+    width: 100%;
+  }
+  }
+  #video2{
+    width: 100%;
+  }
+    </style>
+</head>
+
+<body>
+    <!-- ================== header ================== -->
+    <div id="header">
+        <div id="header-title">
+            <a href="index.html">
+                <h1 class="hover-text" id="text-set-1">Joe Taylor</h1>
+            </a>
+        </div>
+        <div id="links">
+            <a href="projects.html" id="text-set-2" class="link-text hover-text">Projects</a>
+            <a href="play.html" id="text-set-3" class="link-text hover-text">Play</a>
+            <a href="info.html" id="text-set-4" class="link-text hover-text">Info</a>
+        </div>
+    </div>
+    <div id="circle"></div>
+    <!-- ================================================= -->
+    <!-- ================== content ================== -->
+    <div id="content-area">
+        <div id="project-title">
+            <a href="projects.html"><img class="arrow" id="back-arrow" src="img/arrow.svg" alt=""></a>
+            <h1>BUSY MINDS</h1>
+        </div>
+        <div id="project-description">
+            <div class="paragraph">
+                <p> Brief (Self created): <br>
+                    Using creative technology and design thinking, create a campaign to connect with those in a toxic
+                    hustle mindset.
+                </p>
+            </div>
+            <div class="paragraph">
+                <p>
+                    Insight: <br>
+                    Being able to get people to take a step away from what they are doing a few seconds and be mindful
+                    can help people
+                    see things more clearly.</p>
+            </div>
+            <div class="paragraph">
+                <p> response: <br>
+                    Visualise the busy mind of people to help them realise when they take some time out their day
+                    regularly things can become a lot clearer.
+
+                </p>
+            </div>
+        </div>
+        <div id="gallery">
+            <div class="containerstyle1">
+                <iframe src="https://www.youtube.com/embed/DnU4ZA5Y7Aw" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div id="slideshow-container">
+                    <img class="img-slideshow" src="img/busyminds/poster1.png">
+                    <img class="img-slideshow" src="img/busyminds/3posters2.png" style="display:none;">
+                    <div id="previous-half"></div>
+                    <div id="next-half"></div>
+                    <div id="previous-half2"></div>
+                    <div id="next-half2"></div>
+                </div>
+            </div>
+            <div class="containerstyle1">
+                <video class="video logo-vid" src="vid/busyminds/londontubbe mockup.mp4" autoplay loop muted></video>
+                <video class="video logo-vid" src="vid/busyminds/videomockup.mp4" autoplay loop></video>
+            </div>
+            <div class="containerstyle1">
+                <video id="video2" src="vid/busyminds/chrome copy.mov" autoplay loop></video>
+            </div>
+
+        </div>
+
+        <div id="next-project">
+            <p>Next project</p>
+            <a href="SADAAC.html">
+                <h1>SADAAC</h1>
+            </a>
+            <div id="arrow-container">
+                <a href="SADAAC.html"><img class="arrow" src="img/arrow.svg"></a>
+                <p id="image-seperator">AR, Interactive</p>
+            </div>
+        </div>
+
+        <!-- ================================================= -->
+        <!-- ================== footer ================== -->
+        <div id="footer-line"></div>
+        <div id="footer">
+            <div class="details-text">
+                <p id="remove-at-vp">Website designed and coded from scratch</p>
+            </div>
+            <div class="details-text">
+                <a href="https://www.instagram.com/jtdesignpage?igsh=d2ozN2kxaDZtNzF0&utm_source=qr"
+                    target="_blank">Instagram</a>
+                <p id="seperator">|</p>
+                <a class="details-text" href="mailto:joetaylorgd25@gmail.com"
+                    target="_blank">joetaylorgd25@gmail.com</a>
+            </div>
+        </div>
+        <!-- ================================================= -->
+</body>
+
+</html>
