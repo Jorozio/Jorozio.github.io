@@ -142,7 +142,7 @@ if (window.location.pathname === '/projects.html') {
     let report = document.getElementById("report")
     let responsive = document.getElementById("responsive")
     let digital = document.getElementById("digital")
-    let parklane = document.getElementById("parklane")
+    let BusyMinds = document.getElementById("BusyMinds")
     let SADAAC = document.getElementById("SADAAC")
 
     retrippin.addEventListener('click', () => {
@@ -165,8 +165,8 @@ if (window.location.pathname === '/projects.html') {
         window.location.href = "digitalnarrative.html";
     })
 
-    parklane.addEventListener('click', () => {
-        window.location.href = "parklane.html";
+    BusyMinds.addEventListener('click', () => {
+        window.location.href = "BusyMinds.html";
     })
 
     SADAAC.addEventListener('click', () => {
@@ -301,7 +301,7 @@ if (window.location.pathname === '/projects.html') {
 
 }
 // ===================================================================
-if (['/museum.html', '/retrippin.html', '/operationOzone.html'].includes(window.location.pathname)) {
+if (['/museum.html', '/retrippin.html', '/operationOzone.html', '/BusyMinds.html'].includes(window.location.pathname)) {
     let slides = Array.from(document.getElementsByClassName("img-slideshow"));
     let slides2 = Array.from(document.getElementsByClassName("img-slideshow2"));
     let videoElement = document.querySelector('video');
@@ -339,7 +339,7 @@ if (window.location.pathname === '/digitalnarrative.html') {
 
 }
 
-if (window.location.pathname === '/SADAAC.html') {
+if (window.location.pathname === '/SADAAC.html' || window.location.pathname === '/BusyMinds.html') {
     let clips = document.querySelectorAll(".logo-vid")
 
 /* Adding the event listeners on the video to play/pause the video. */
