@@ -1,0 +1,162 @@
+html, body {
+  padding: 0;
+  margin: auto;
+  position: absolute;
+  background-color: '#F0F0F0';
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+
+@font-face {
+  font-family: 'Spoof';
+  src: url(/public/fonts/SpoofThin.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(/public/fonts/Poppins-Light.ttf) format('opentype');
+}
+
+.spoof{
+  position: relative;
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+  line-height: 0.9em;
+  font-family: 'Spoof'  !important;
+  font-weight: 100;
+  color:rgb(62, 62, 62);
+}
+
+p{
+font-family: 'Poppins';
+font-size: 12pt;
+line-height: 100%;
+}
+
+
+#first-half,#last-half{
+width: 90%;
+display: flex;
+
+
+
+}
+
+#first-half{
+  padding-top: 8%;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;  
+
+}
+
+#last-half{
+  flex-direction: column;
+  justify-content: center;
+}
+#title{
+  width: 40vw;
+  margin-bottom: 2%;
+}
+
+
+#para-container{
+  width: 100%;
+  margin-top: 3%;
+}
+
+#export-button{
+  height: 30px;
+  width: 100px;
+  margin: 2%;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+    background-color: #111111; /* Change the background color */
+    border: none; /* Remove the default border */
+    color: white;
+    border-radius: 10px; 
+}
+
+
+
+
+
+#data-input-container2{
+  display: flex;
+  justify-content: center;
+  margin: 4%;
+  margin-top: 0;
+  flex-direction: column;
+}
+
+#text-input{
+  width: 100%;
+  display: flex;
+  height: 120px;
+}
+#submit{
+  margin-top: 5%;
+  width: 100%;
+  height: 30px;
+}
+input[type="range"] {
+  accent-color: rgb(32, 32, 32);
+  
+}
+input[type="range"]:active{
+  accent-color: rgb(96, 124, 107);
+}
+
+
+#slider-container{
+  margin-bottom: 7%;
+  width: 100%;
+  display: flex;
+
+}
+
+#course{
+  height: 30px;
+  width: 120px;
+}
+
+#form-submission{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#submissionForm{
+  width: 100%;
+}
+
+#how-chaotic{
+  padding-top: 2%;
+}
+
+.slider{  width: 100%;}
+
+#canvas-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto; 
+}
+
+/* Optionally, style the canvas itself */
+#myCanvas {
+  display: block; /* Removes the default margin and padding */
+  z-index: -1;
+}
+
+

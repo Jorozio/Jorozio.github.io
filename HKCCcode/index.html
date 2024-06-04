@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HKCC 2024</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="libraries/p5.min.js" defer></script>
+  <!-- <script src="events.js" defer></script>
+  <script src="sketch.js" defer></script> -->
+  <script src="Testfile.js" defer></script>
+</head>
+
+<body>
+  <div id="first-half">
+
+      <img id="title" src="assets/logo-02.png" alt="">
+
+      <div id="data-input-container1">
+
+        <select name="course" id="course">
+          <option value="volvo">Select your course</option>
+          <option value="EID">Environmental & Interior Design</option>
+          <option value="MID">Moving Image Design</option>
+          <option value="VC">Visual Communication</option>
+          <option value="A">Advertising</option>
+        </select>
+
+    </div>
+  </div>
+  
+  <div id="last-half">
+    <div id="data-input-container2">
+      <div id="para-container">
+    <p>Write down a few milestones or <br>
+      highlights from your time at universtity</p>
+    </div>
+    <div id="form-submission">
+      <form id="submissionForm">
+        <input id="text-input" type="text">
+        <input id="submit" type="submit" value="Submit">
+      </form>
+  </div>
+  <p id="how-chaotic">Chaos Meter</p>
+  <div id="slider-container">
+
+  <input type="range" min="1" max="10" value="1" step="0.1" class="slider" id="myRange">
+  <button id="export-button">
+    <p>Export</p>
+  </button>
+</div>
+  </div>
+  <div id="canvas-container">
+    <canvas id="myCanvas"></canvas>
+</div>
+ 
+
+  </div>
+
+</body>
+
+</html>
