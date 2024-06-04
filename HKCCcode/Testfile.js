@@ -1,18 +1,17 @@
 
-
-// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 class Point {
     constructor(x, y, direction) {
         this.x = x;
         this.y = y;
-        this.theta = theta
+        this.theta = Math.random() * 2 * Math.PI;
         this.direction = direction
     }
 }
 
+
+
 let mySlider;
-let colors = ['#fff', '#1f71b8', '#05ab9e', '#8e3089', '#e5352b'];
+let colors = ['#fff', '#05ab9e', '#1f71b8', '#8e3089', '#e5352b'];
 let inputValue;
 let currentColorIndex = 0; // Initialize the current color index
 
@@ -21,10 +20,9 @@ let formSubmissions = [];
 let canvasWidth;
 let canvasHeight;
 
-let theta = Math.random() * 2 * Math.PI; 
 let points = []; // Store points globally
 let singlePoint;
-let sliderValue
+let sliderValue = 0; 
 
 let shouldUpdatePoints = true; // Flag to control points update
 
@@ -46,13 +44,12 @@ form.addEventListener('submit', function (event) {
             }
         } else if (formSubmissions.length > 3) {
             // Generate random offsets
-            const offsetX = Math.random() * 40 - 40;
-            const offsetY = Math.random() * 40 - 40; 
+            const offsetX = Math.random() * 35 - 35;
+            const offsetY = Math.random() * 35 - 35;
             formSubmissions.push({ value: inputValue, offsetX: offsetX, offsetY: offsetY });
         }
     }
 
-    console.log(formSubmissions.length);
 
     document.getElementById('text-input').value = '';
 
@@ -61,20 +58,10 @@ form.addEventListener('submit', function (event) {
 });
 
 
-function handleSliderChange(value) {
-    console.log("Slider value:", value);
-    // Calculate movement factor based on the slider value
-    const movementFactor = value; // Normalize movement factor to [0, 1]
-
-    // Apply movement to each point based on theta and slider value
-
-    // Update flag to recalculate points
-    shouldUpdatePoints = true;
-}
 
 mySlider = document.getElementById('myRange');
 mySlider.addEventListener('input', () => {
-    sliderValue = mySlider.value * 10;
+    sliderValue = mySlider.value * 9;
 
     return sliderValue
 });
@@ -146,37 +133,36 @@ function draw() {
 
 
     background(255);
-
     beginShape();
     noFill();
     stroke(colors[currentColorIndex]);
-    strokeWeight(2);
-    // vertex(start.x, start.y);
-    for (let point of points) {
-        curveVertex(point.x, point.y);
-        points.forEach(point => {
-            push();
-            noFill();
-            stroke(colors[currentColorIndex]);
-            strokeWeight(2);
-            translate(point.x, point.y);
-        
-            // draw the point at r, theta with r = sliderValue
-            let xCord = sliderValue * cos(theta);
-            let yCord = sliderValue * sin(theta);
-        
-            curveVertex(xCord, yCord);
-            circle(xCord, yCord, 10)
-        
-            pop();
-        })
-    }
+    strokeWeight(1);
+
+    vertex(start.x, start.y);
+    curveVertex(start.x, start.y);
+  
+    points.forEach(point => {
+        noFill();
+        stroke(colors[currentColorIndex]);
+        strokeWeight(1);
+
+        // draw the point at r, theta with r = sliderValue
+        let xCord = sliderValue * cos(point.theta);
+        let yCord = sliderValue * sin(point.theta);
+        // circle(point.x + xCord, point.y + yCord, 10)
+
+        curveVertex(point.x + xCord, point.y + yCord);
+    })
+
+    curveVertex(end.x, end.y);
     vertex(end.x, end.y);
+
     endShape();
 
     push();
     noStroke();
     fill(0);
+
     circle(start.x, start.y, 30);
     circle(end.x, end.y, 30);
     pop();

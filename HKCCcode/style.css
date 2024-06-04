@@ -19,7 +19,7 @@ html, body {
 
 @font-face {
   font-family: 'Poppins';
-  src: url(/public/fonts/Poppins-Light.ttf) format('opentype');
+  src: url(public/fonts/Poppins-Light.ttf) format('opentype');
 }
 
 .spoof{
