@@ -19,6 +19,7 @@ let formSubmissions = [];
 
 let canvasWidth;
 let canvasHeight;
+let myCanvas;
 
 let points = []; // Store points globally
 
@@ -27,8 +28,10 @@ let sliderValue = 0;
 let shouldUpdatePoints = true; // Flag to control points update
 let submissionCount = 0;
 
-const start = new Point(150, 100);
-const end = new Point(-150, -170);
+let ShouldDrawWhite = false
+
+const start = new Point(130, 30);
+const end = new Point(-130, -170);
 
 const form = document.getElementById('submissionForm');
 
@@ -83,8 +86,17 @@ mySlider.addEventListener('input', () => {
     return sliderValue
 });
 
-document.getElementById('course').addEventListener('change', function () {
+let dropdown = document.getElementById('course')
+
+dropdown.addEventListener('change', function () {
     const selectedCourse = this.value;
+
+    if (selectedCourse!== "") {
+        exportButton.disabled = false;
+    } else {
+        // Disable the export button if no course is selected
+        exportButton.disabled = true;
+    }
 
     switch (selectedCourse) {
         case 'EID':
@@ -129,3 +141,28 @@ function distributePoints(start, end, submissions) {
     }
     return points;
 }
+
+
+const exportButton = document.getElementById('export-button');
+
+
+
+// Attach a click event listener to the button
+exportButton.addEventListener('click', function() {
+
+ form.style.display = 'none'
+ mySlider.style.display = 'none'
+ dropdown.style.display = 'none'
+ exportButton.style.display = 'none'
+ // select the things that aren't yet variables
+document.getElementById('title').style.display = 'none'
+document.getElementById('para-container').style.display = 'none';
+document.getElementById('how-chaotic').style.display = 'none';
+
+document.body.style.backgroundColor = '#1e1e1e';
+ShouldDrawWhite = true
+
+
+
+});
+
