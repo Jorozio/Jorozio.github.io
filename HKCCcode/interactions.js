@@ -23,7 +23,7 @@ let myCanvas;
 
 let points = []; // Store points globally
 
-let sliderValue = 0; 
+let sliderValue = 0;
 
 let shouldUpdatePoints = true; // Flag to control points update
 let submissionCount = 0;
@@ -48,26 +48,26 @@ form.addEventListener('submit', function (event) {
 
     // Store the input value along with the generated offsets
     if (submissionCount < 8) {
-    if (!shouldUpdatePoints) {
-        if (formSubmissions.length === 0) {
-            // If there are no submissions, add four new points
-            for (let i = 0; i < 4; i++) {
+        if (!shouldUpdatePoints) {
+            if (formSubmissions.length === 0) {
+                // If there are no submissions, add four new points
+                for (let i = 0; i < 4; i++) {
+                    // Generate random offsets
+                    const offsetX = Math.random() * 25 - 25;
+                    const offsetY = Math.random() * 25 - 25; // Random offset between -5 and 15
+                    formSubmissions.push({ value: inputValue, offsetX: offsetX, offsetY: offsetY });
+                }
+            } else if (formSubmissions.length > 3) {
                 // Generate random offsets
-                const offsetX = Math.random() * 25 - 25;
-                const offsetY = Math.random() * 25 - 25; // Random offset between -5 and 15
+                const offsetX = Math.random() * 35 - 35;
+                const offsetY = Math.random() * 35 - 35;
                 formSubmissions.push({ value: inputValue, offsetX: offsetX, offsetY: offsetY });
+                submissionCount++;
             }
-        } else if (formSubmissions.length > 3) {
-            // Generate random offsets
-            const offsetX = Math.random() * 35 - 35;
-            const offsetY = Math.random() * 35 - 35;
-            formSubmissions.push({ value: inputValue, offsetX: offsetX, offsetY: offsetY });
-            submissionCount++;
+        } else {
+            // Prevent further submissions
+            document.getElementById('text-input').value = '';
         }
-    } else {
-        // Prevent further submissions
-        document.getElementById('text-input').value = '';
-    }
     }
 
 
@@ -91,28 +91,39 @@ let dropdown = document.getElementById('course')
 dropdown.addEventListener('change', function () {
     const selectedCourse = this.value;
 
-    if (selectedCourse!== "") {
+
+    if (selectedCourse !== "") {
         exportButton.disabled = false;
     } else {
         // Disable the export button if no course is selected
         exportButton.disabled = true;
     }
+    let logos = document.getElementsByClassName('course-logo');
+    for (let i = 0; i < logos.length; i++) {
+        logos[i].style.display = 'none';
+    }
 
     switch (selectedCourse) {
         case 'EID':
             currentColorIndex = 1;
+            document.getElementById('EID').style.display = 'block';
             break;
         case 'MID':
             currentColorIndex = 2;
+            document.getElementById('MIV').style.display = 'block';
             break;
         case 'VC':
             currentColorIndex = 3;
+            document.getElementById('VC').style.display = 'block';
             break;
         case 'A':
             currentColorIndex = 4;
+            document.getElementById('ADV').style.display = 'block';
             break;
         default:
             currentColorIndex = 0;
+           
+
     }
     // Update flag to recalculate points
     shouldUpdatePoints = true;
@@ -148,19 +159,23 @@ const exportButton = document.getElementById('export-button');
 
 
 // Attach a click event listener to the button
-exportButton.addEventListener('click', function() {
+exportButton.addEventListener('click', function () {
 
- form.style.display = 'none'
- mySlider.style.display = 'none'
- dropdown.style.display = 'none'
- exportButton.style.display = 'none'
- // select the things that aren't yet variables
-document.getElementById('title').style.display = 'none'
-document.getElementById('para-container').style.display = 'none';
-document.getElementById('how-chaotic').style.display = 'none';
+    form.style.display = 'none'
+    mySlider.style.display = 'none'
+    dropdown.style.display = 'none'
+    exportButton.style.display = 'none'
+    // select the things that aren't yet variables
+    document.getElementById('title').style.display = 'none'
+    document.getElementById('para-container').style.display = 'none';
+    document.getElementById('how-chaotic').style.display = 'none';
 
-document.body.style.backgroundColor = '#1e1e1e';
-ShouldDrawWhite = true
+    document.getElementById('initially-hidden').style.display = 'flex';
+
+    document.getElementById('square-grid').style.backgroundColor = '#1e1e1e';
+
+
+    ShouldDrawWhite = true
 
 
 

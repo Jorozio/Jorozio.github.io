@@ -65,13 +65,31 @@ display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#title{
+#title,#new-title{
   width: 50vw;
   padding-left: 2%;
   margin-bottom: 5%;
 }
 
+#new-title{
+  width: 45vw;
+}
 
+#initially-hidden{
+  position: absolute;
+  top: 0%;
+  width: 90%;
+  padding: 5%;
+  display: none;
+  justify-content: space-between;
+  padding-bottom: 0;
+}
+
+.course-logo{
+  margin-top: 3.5%;
+width: 45px;
+height: 45px;
+}
 #para-container{
   width: 100%;
   margin-top: 3%;
@@ -159,10 +177,15 @@ input[type="range"]:active{
   height: auto; 
 }
 
-/* Optionally, style the canvas itself */
+
 #myCanvas {
   display: block; /* Removes the default margin and padding */
   z-index: -1;
 }
 
-
+#square-grid {
+  position: absolute;
+  width: 100%; /* Adjust based on your needs */
+  padding-top: 100%; /* This makes the height equal to the width */
+  z-index: -2;
+}
