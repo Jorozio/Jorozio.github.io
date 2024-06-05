@@ -21,10 +21,14 @@ let canvasWidth;
 let canvasHeight;
 
 let points = []; // Store points globally
-let singlePoint;
+
 let sliderValue = 0; 
 
 let shouldUpdatePoints = true; // Flag to control points update
+let submissionCount = 0;
+
+const start = new Point(150, 100);
+const end = new Point(-150, -170);
 
 const form = document.getElementById('submissionForm');
 
@@ -32,7 +36,15 @@ form.addEventListener('submit', function (event) {
     event.preventDefault();
     inputValue = document.getElementById('text-input').value;
 
+
+    if (inputValue === '') {
+        // Show an alert or handle the empty input case as needed
+        alert("Please enter some text before submitting.");
+        return; // Exit the function early to prevent form submission
+    }
+
     // Store the input value along with the generated offsets
+    if (submissionCount < 8) {
     if (!shouldUpdatePoints) {
         if (formSubmissions.length === 0) {
             // If there are no submissions, add four new points
@@ -47,7 +59,12 @@ form.addEventListener('submit', function (event) {
             const offsetX = Math.random() * 35 - 35;
             const offsetY = Math.random() * 35 - 35;
             formSubmissions.push({ value: inputValue, offsetX: offsetX, offsetY: offsetY });
+            submissionCount++;
         }
+    } else {
+        // Prevent further submissions
+        document.getElementById('text-input').value = '';
+    }
     }
 
 
@@ -89,8 +106,7 @@ document.getElementById('course').addEventListener('change', function () {
     shouldUpdatePoints = true;
 });
 
-const start = new Point(150, 100);
-const end = new Point(-150, -170);
+
 
 function distributePoints(start, end, submissions) {
     const points = [];
@@ -112,58 +128,4 @@ function distributePoints(start, end, submissions) {
         points.push(new Point(adjustedX, adjustedY));
     }
     return points;
-}
-
-function setup() {
-    canvasWidth = windowWidth;
-    canvasHeight = 450;
-    createCanvas(canvasWidth, canvasHeight, WEBGL);
-
-    singlePoint = new Point
-
-}
-
-function draw() {
-    if (shouldUpdatePoints) {
-        points = distributePoints(start, end, formSubmissions);
-        shouldUpdatePoints = false; // Reset flag after updating points
-    }
-
-
-
-
-    background(255);
-    beginShape();
-    noFill();
-    stroke(colors[currentColorIndex]);
-    strokeWeight(1);
-
-    vertex(start.x, start.y);
-    curveVertex(start.x, start.y);
-  
-    points.forEach(point => {
-        noFill();
-        stroke(colors[currentColorIndex]);
-        strokeWeight(1);
-
-        // draw the point at r, theta with r = sliderValue
-        let xCord = sliderValue * cos(point.theta);
-        let yCord = sliderValue * sin(point.theta);
-        // circle(point.x + xCord, point.y + yCord, 10)
-
-        curveVertex(point.x + xCord, point.y + yCord);
-    })
-
-    curveVertex(end.x, end.y);
-    vertex(end.x, end.y);
-
-    endShape();
-
-    push();
-    noStroke();
-    fill(0);
-
-    circle(start.x, start.y, 30);
-    circle(end.x, end.y, 30);
-    pop();
 }
