@@ -35,7 +35,7 @@ html, body {
 
 p{
 font-family: 'Poppins';
-font-size: 12pt;
+font-size: 11pt;
 line-height: 100%;
 }
 
@@ -46,6 +46,11 @@ display: flex;
 
 
 
+}
+
+#middle-half{
+  width: 84%;
+  padding-top: 3%;
 }
 
 #first-half{
@@ -61,8 +66,9 @@ display: flex;
   justify-content: center;
 }
 #title{
-  width: 40vw;
-  margin-bottom: 2%;
+  width: 50vw;
+  padding-left: 2%;
+  margin-bottom: 5%;
 }
 
 
@@ -126,7 +132,7 @@ input[type="range"]:active{
 
 #course{
   height: 30px;
-  width: 120px;
+  width: 220px;
 }
 
 #form-submission{

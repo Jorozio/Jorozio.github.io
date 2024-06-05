@@ -30,8 +30,8 @@ let submissionCount = 0;
 
 let ShouldDrawWhite = false
 
-const start = new Point(150, 100);
-const end = new Point(-150, -170);
+const start = new Point(130, 30);
+const end = new Point(-130, -170);
 
 const form = document.getElementById('submissionForm');
 
