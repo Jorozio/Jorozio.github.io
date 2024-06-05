@@ -1,8 +1,16 @@
+let triangleW; let triangleB;
+
+
+function preload() {
+    triangleW = loadImage('assets/triangle-white.png');
+    triangleB = loadImage('assets/triangle-black.png');  // Adjust the path to where your image is located
+  }
+
 
 function setup() {
     canvasWidth = windowWidth;
     canvasHeight = 450;
-    createCanvas(canvasWidth, canvasHeight, WEBGL);
+    myCanvas = createCanvas(canvasWidth, canvasHeight, WEBGL);
 
 }
 
@@ -15,7 +23,7 @@ function draw() {
 
 
 
-    background(255);
+    background(255,0);
     beginShape();
     noFill();
     stroke(colors[currentColorIndex]);
@@ -36,12 +44,25 @@ function draw() {
     vertex(end.x, end.y);
 
     endShape();
-
+if(!ShouldDrawWhite){
     push();
     noStroke();
     fill(0);
 
-    circle(start.x, start.y, 30);
+
+    image(triangleB, start.x -17, start.y - 14, 34, 30);
+
     circle(end.x, end.y, 30);
     pop();
+} else {
+    push();
+    noStroke();
+    fill(255);
+
+    image(triangleW, start.x -17, start.y - 14, 34, 30);
+    circle(end.x, end.y, 30);
+    pop();
+}
+  
+
 }
