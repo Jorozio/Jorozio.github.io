@@ -72,7 +72,7 @@ display: flex;
 }
 
 #new-title{
-  width: 45vw;
+  width: 40vw;
 }
 
 #initially-hidden{
@@ -85,10 +85,18 @@ display: flex;
   padding-bottom: 0;
 }
 
+#hidden-text{
+  position: absolute;
+  top: 102vw;
+  width: 50%;
+margin-right: 40%;
+display: none;
+}
+
 .course-logo{
-  margin-top: 3.5%;
-width: 45px;
-height: 45px;
+  margin-top: 3%;
+width: 50px;
+height: 50px;
 }
 #para-container{
   width: 100%;

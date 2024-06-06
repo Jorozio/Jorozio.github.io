@@ -171,6 +171,7 @@ exportButton.addEventListener('click', function () {
     document.getElementById('how-chaotic').style.display = 'none';
 
     document.getElementById('initially-hidden').style.display = 'flex';
+    document.getElementById('hidden-text').style.display = 'block';
 
     document.getElementById('square-grid').style.backgroundColor = '#1e1e1e';
 
