@@ -12,7 +12,7 @@
     <script src="script.js" defer></script>
 
     <style>
-             #gallery {
+        #gallery {
             width: 96%;
             margin: 2%;
             display: flex;
@@ -20,21 +20,24 @@
             justify-content: right;
             align-items: center;
         }
-        #link-holder{
-    width: 60%;
-    padding-inline: 2.5%;
-    padding-bottom: 1%;
-    text-align: right;
+
+        #link-holder {
+            width: 100%;
+            padding-inline: 2.5%;
+            padding-bottom: 3%;
+            text-align: center;
 
 
-}
-#link{
-    text-decoration: underline;
-    font-family: degular-display, sans-serif;
-    font-weight: 200;
-    font-size: 1.5rem;
-    color:rgb(0, 195, 255)
-}
+        }
+
+        #link {
+            text-decoration: underline;
+            font-family: degular-display, sans-serif;
+            font-weight: 200;
+            font-size: 1.5rem;
+            color: rgb(0, 195, 255)
+        }
+
         #vid1 {
             width: 35%;
             object-fit: cover;
@@ -45,13 +48,19 @@
             object-fit: cover;
         }
 
-        .ozone-images{
+        iframe{
+            width: 95vw;
+            height: 100vh;
+        }
+
+        .ozone-images {
             width: 31%;
             object-fit: cover;
             margin-inline: 1%;
-            
+
         }
-        #ozone-link{
+
+        #ozone-link {
             margin-bottom: 2%;
         }
 
@@ -78,22 +87,32 @@
             width: 100%;
             object-fit: cover;
         }
-
+        #PENCIL-icon{
+            width: 120px;
+        }
+#title-and-pencil-container{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
         @media screen and (max-width: 900px) {
-            #vid1,#vid2 {
+
+            #vid1,
+            #vid2 {
                 width: 99%;
                 padding: 0.5%;
             }
-            .ozone-images{
+
+            .ozone-images {
                 width: 99%;
                 height: 700px;
                 padding: 0.5%;
             }
 
-            #link-holder{
+            #link-holder {
                 display: none;
             }
-            
+
         }
     </style>
 </head>
@@ -116,11 +135,14 @@
     <!-- ================================================= -->
     <!-- ================== content ================== -->
     <div id="content-area">
+        <div id="title-and-pencil-container">
         <div id="project-title">
             <a href="projects.html"><img class="arrow" id="back-arrow" src="img/arrow.svg" alt=""></a>
             <h1>OPERATION OZONE</h1>
-            <div id="link-holder"><a id='link' href="ozone/index2.html">Click me! Interactive Website</a></div>
+   
         </div>
+        <img id="PENCIL-icon" src="img/ozone/Pencil winner icon.png">
+    </div>
         <div id="project-description">
             <div class="paragraph">
                 <p> Brief: <br>
@@ -144,25 +166,27 @@
         </div>
         <!-- ====================== gallery =================== -->
         <div id="gallery">
-    
+            <div class="containerstyle1">
+                <iframe id="main-video" src="https://www.youtube.com/embed/ZOsWgzVZIXY?si=UpCubPH5W08e0a-b"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
             <div class="containerstyle1">
                 <video id="vid1" src="vid/ozone/ozone.mp4" loop autoplay muted></video>
                 <video id="vid2" src="vid/ozone/sixtyFour.mov" loop autoplay muted></video>
             </div>
+            <div id="link-holder"><a id='link' href="ozone/index2.html">Have a go with the Interactive Website</a></div>
 
             <div class="containerstyle1">
                 <div id="slideshow-container">
                     <img class="img-slideshow" src="img/ozone/LA SPHERE_00297.png">
                     <img class="img-slideshow" src="img/ozone/AC mockup.png" style="display:none;">
                     <img class="img-slideshow" src="img/ozone/tube_mockup.png" style="display:none;">
+                    <img class="img-slideshow" src="img/ozone/poster_mockup.png" style="display:none;">
                     <div id="previous-half"></div>
                     <div id="next-half"></div>
                 </div>
-            </div>
-            <div class="containerstyle3">
-                <img class="ozone-images" src="img/ozone/Screenshot 2024-03-19 at 23.36.32.jpg">
-                <img class="ozone-images" src="img/ozone/IMG_3440.jpg">
-                <img class="ozone-images" src="img/ozone/poem_mockup.png">
             </div>
         </div>
     </div>
