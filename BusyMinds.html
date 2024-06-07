@@ -71,20 +71,29 @@
         }
 
         #video2 {
-            width: 80%;
+            width: 100%;
             /* padding: 2%; */
         }
-        @media screen and  (max-width: 900px) {
-  .video{
-    width: 100%;
-  }
-  iframe{
-    width: 100%;
-  }
-  }
-  #video2{
-    width: 100%;
-  }
+
+        /* #video3 {
+            width: 30%;
+        } */
+
+        @media screen and (max-width: 900px) {
+            .video {
+                width: 100%;
+            }
+
+            iframe {
+                width: 100%;
+            }
+            #video2,
+        #video3 {
+            width: 100%;
+        }
+        }
+
+      
     </style>
 </head>
 
@@ -151,9 +160,10 @@
                 <video class="video logo-vid" src="vid/busyminds/videomockup.mp4" autoplay loop></video>
             </div>
             <div class="containerstyle1">
-                <video id="video2" src="vid/busyminds/chrome copy.mov" autoplay loop></video>
                 <!-- <video id="video3" src="BusyMinds/vid/BUSYMINDS.mp4" autoplay loop></video> -->
+                <video id="video2" src="vid/busyminds/chrome copy.mov" autoplay loop></video>
             </div>
+                     
 
         </div>
 
