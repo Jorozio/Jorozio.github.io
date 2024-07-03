@@ -21,7 +21,8 @@ function getBrowserInfo() {
    
    function errorMsg() {
      let browserName = getBrowserInfo();
-     if (browserName !== '125') {
+     let browserVersionNumber = parseInt(browserName, 10);
+     if (browserVersionNumber !== 126) {
        const errorImg = document.getElementById("error-img")
        const errorTxt = document.getElementById("error-txt")
        errorImg.style.display = 'block'
