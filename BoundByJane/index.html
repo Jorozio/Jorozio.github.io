@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bound By Jane</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="libraries/p5.min.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div id="logo-container"><button id="logo-button"><img id="logo" src="img/BOUNDBYJANELOGO.png" alt=""></button></div>
+
+    <div id="canvasWrapper"></div>
+    <div id="controls">
+      <input type="text" id="textInput" placeholder="TEXT GOES HERE" />
+      <div id="backgroundUpload" class="drop-area">
+        <p>CLICK, OR DROP AN IMAGE HERE</p>
+        <input type="file" id="fileInput" accept="image/*" />
+      </div>
+
+      <div class="overall-container">
+        <div class="double-container">
+          <div>
+            <p class="Descriptive-P">RATIO</p>
+            <select id="aspectRatioSelector">
+              <option value="1:1">1:1</option>
+              <option value="9:16">9:16</option>
+              <option value="3:2">3:2</option>
+              <option value="4:3">4:3</option>
+            </select>
+          </div>
+
+          <div id="seperator">
+            <p class="Descriptive-P">COLOURS</p>
+            <button id="colourToggle"></button>
+          </div>
+
+        </div>
+
+        <div>
+          <p class="Descriptive-P">FONT SIZE</p>
+          <select id="FontSizeSelector">
+            <option value="18">Small</option>
+            <option value="32">Medium</option>
+            <option value="38">Large</option>
+            <option value="45">Extra large</option>
+          </select>
+        </div>
+      </div>
+
+      <p class="Descriptive-P">PULL SLIDER</p>
+      <input type="range" id="zSlider" min="1" max="200" value="0">
+      <p id="seperator2" class="Descriptive-P">TWIST SLIDER</p>
+      <input type="range" id="TwistSlider" min="1" max="100" value="1">
+      <button id="Exportbutton">Export</button>
+      <div id="information-container">
+        <div class="info">
+          <p>ENTER:</p> <p>Lock lines in place</p>
+        </div>
+        <div class="info">
+          <p>ESCAPE:</p><p>Clear canvas</p>
+        </div>
+        <div class="info">
+          <p>LEFT ARROW:</p><p>Clear any unlocked lines</p>
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+  <script src="interactions.js"></script>
+  <script src="sketch.js"></script>
+</body>
+
+</html>
